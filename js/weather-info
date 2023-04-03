@@ -12,6 +12,7 @@ const SetImage = require("./images");
 if (weatherGeneral === 800)
     {
         SetImage(800);
+        let r = prompt("Works");
     }
 
 
