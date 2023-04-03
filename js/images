@@ -1,0 +1,24 @@
+/*Creates default image*/
+let img = document.createElement("img");
+img.src = "/img/default.png";
+
+
+//DYNAMIC IMAGES=============================================================================
+//This section points to the elements in the file that will have an image appended as a child.
+
+/*Page elements*/
+//Current time of day and general condition
+const currentGeneralConditions = document.getElementById("current-general-conditions");
+
+/*Images Sources*/
+//Day Clear
+const dayClear = "/img/daytimeClear.png";
+
+
+//Image Functions============================================================================
+//Set Image
+function SetImage(newImage){
+    img.src = newImage
+}
+
+
