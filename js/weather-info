@@ -14,7 +14,7 @@ if (weatherGeneral === 800)
         SetImage(800);
         let r = prompt("Works");
     }
-
+    let r2 = prompt("Does not work", weatherGeneral);
 
 
 
