@@ -1,6 +1,6 @@
 /*Creates default image*/
 let img = document.createElement("img");
-img.src = "/img/default.png";
+img.src = "";
 
 
 //DYNAMIC IMAGES=============================================================================
@@ -14,11 +14,34 @@ const currentGeneralConditions = document.getElementById("current-general-condit
 //Day Clear
 const dayClear = "/img/daytimeClear.png";
 
+//Default
+const neutralDefault = "/img/blackHole.png";
 
 //Image Functions============================================================================
 //Set Image
 function SetImage(newImage){
-    img.src = newImage
+    
+    switch (newImage){
+
+        case 800:
+            img.src = dayClear;
+            break;
+            
+        case 2:
+            img.src = dayCloudy;
+            break;
+
+        case 3:
+            img.src = dayRainy;
+            break;
+
+        default:
+            img.src = neutralDefault;
+            break;
+            
+    }
+
 }
 
-
+//Export
+module.exports = SetImage;

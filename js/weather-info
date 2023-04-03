@@ -1,0 +1,25 @@
+fetch('https://api.openweathermap.org/data/2.5/weather?lat={51.5072}&lon={-0.1276}&appid={58173614dccdb2e31d9fee6b2beef1a1}')
+  .then(response => response.json())
+  .then(data => {
+    
+
+const weatherGeneral = weather.main; 
+
+const SetImage = require("./images");
+
+
+
+if (weatherGeneral === 800)
+    {
+        SetImage(800);
+    }
+
+
+
+
+
+
+  })
+  .catch(error => {
+    console.error('Error retrieving data from API:', error);
+  });
