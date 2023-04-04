@@ -1,3 +1,4 @@
+
 /*Creates default image*/
 let img = document.createElement("img");
 img.src = "";
@@ -12,23 +13,25 @@ const currentGeneralConditions = document.getElementById("current-general-condit
 
 /*Images Sources*/
 //Day Clear
-const dayClear = "/img/daytimeClear.png";
+const dayClear = "../img/daytimeClear.png";
 
 //Default
-const neutralDefault = "/img/blackHole.png";
+const neutralDefault = "../img/blackHole.png";
 
 //Image Functions============================================================================
 //Set Image
-function SetImage(newImage){
-    
-    switch (newImage){
+export function SetImage(newImage) {
 
-        case 800:
+    switch (newImage) {
+
+        case 1:
             img.src = dayClear;
+            img.style.width = "10rem";
             break;
-            
+
         case 2:
             img.src = dayCloudy;
+
             break;
 
         case 3:
@@ -37,11 +40,11 @@ function SetImage(newImage){
 
         default:
             img.src = neutralDefault;
+            img.style.width = "10rem";
             break;
-            
+
     }
 
-}
+    currentGeneralConditions.appendChild(img);
 
-//Export
-module.exports = SetImage;
+}

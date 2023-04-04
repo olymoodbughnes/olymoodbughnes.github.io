@@ -1,0 +1,11 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "My project description",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node js/weather-info.js"
+  },
+  "dependencies": {}
+}
