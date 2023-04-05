@@ -9,12 +9,13 @@ let chosenCity;
 window.onload = function () {
 
   chosenCity = prompt("Type 1 for London, Type 2 For Dover.")
-  if (chosenCity === 1) {
+  alert(chosenCity);
+  if (chosenCity === "1") {
 
 
     latlong = londonWeather;
 
-  } else if (chosenCity === 2) {
+  } else if (chosenCity === "2") {
 
 
     latlong = doverWeather;
