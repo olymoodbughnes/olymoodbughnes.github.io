@@ -144,7 +144,11 @@ export function DisplayTemp(min, max, temp, feel) {
 
 
     const currentTemp = document.getElementById("temperature");
-    currentTemp.textContent = min + " " + max + " " + temp + " " + feel;
+    const centigradeMin = min - 273.15;
+    const centigradeMax = max - 273.15;
+    const centigradeTemp = temp - 273.15;
+    const centigradeFeel = feel - 273.15;
+    currentTemp.textContent = "Minimum : " + parseInt(centigradeMin) + " " + "Maximum : " + parseInt(centigradeMax) + " " + "Current Temperature : " + parseInt(centigradeTemp) + " " + "Feels like : " + parseInt(centigradeFeel);
 
 }
 
