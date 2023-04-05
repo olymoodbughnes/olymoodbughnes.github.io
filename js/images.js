@@ -12,8 +12,31 @@ img.src = "";
 const currentGeneralConditions = document.getElementById("current-general-conditions");
 
 /*Images Sources*/
-//Day Clear
+
+
 const dayClear = "../img/daytimeClear.png";
+
+const dayPartCloudy = "../img/daytimePartCloudy.png";
+
+const mist = "../img/mist.png";
+
+const nighttimeClear = "../img/nighttimeClear.png";
+
+const nightimePartCloudy = "../img/nighttimePartCloudy.png";
+
+const overcastClouds = "../img/overcastClouds.png";
+
+const rain = "../img/rain.png";
+
+const rainNight = "../img/rainNight.png";
+
+const scatteredCloud = "../img/scatteredCloud.png";
+
+const showerRain = "../img/showerRain.png";
+
+const snow = "../img/snow.png";
+
+const thunderstorm = "../img/thunderstorm.png";
 
 //Default
 const neutralDefault = "../img/blackHole.png";
@@ -26,11 +49,11 @@ export function SetImage(newImage) {
 
         case 1:
             img.src = dayClear;
-            img.style.width = "10rem";
+
             break;
 
         case 2:
-            img.src = dayCloudy;
+            img.src = dayPartCloudy;
 
             break;
 
@@ -38,13 +61,53 @@ export function SetImage(newImage) {
             img.src = dayRainy;
             break;
 
+        case 4:
+            img.src = mist;
+            break;
+
+        case 5:
+            img.src = nighttimeClear;
+            break;
+
+        case 6:
+            img.src = nightimePartCloudy;
+            break;
+
+        case 7:
+            img.src = overcastClouds;
+            break;
+
+        case 8:
+            img.src = rain;
+            break;
+
+        case 9:
+            img.src = rainNight;
+            break;
+
+        case 10:
+            img.src = scatteredCloud;
+            break;
+
+        case 11:
+            img.src = showerRain;
+            break;
+
+        case 12:
+            img.src = snow;
+            break;
+
+        case 13:
+            img.src = thunderstorm;
+            break;
+
         default:
             img.src = neutralDefault;
-            img.style.width = "10rem";
+
             break;
 
     }
-
+    img.style.width = "10rem"
     currentGeneralConditions.appendChild(img);
 
 }
