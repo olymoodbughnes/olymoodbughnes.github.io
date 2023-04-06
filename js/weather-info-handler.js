@@ -140,16 +140,22 @@ export function DisplayLocationName(locationName) {
 
 }
 
-export function DisplayTemp(min, max, temp, feel) {
+export function DisplayTemp(min, max, temp) {
 
 
     const currentTemp = document.getElementById("temperature");
     const centigradeMin = min - 273.15;
     const centigradeMax = max - 273.15;
     const centigradeTemp = temp - 273.15;
-    const centigradeFeel = feel - 273.15;
-    currentTemp.textContent = "Minimum : " + parseInt(centigradeMin) + " " + "Maximum : " + parseInt(centigradeMax) + " " + "Current Temperature : " + parseInt(centigradeTemp) + " " + "Feels like : " + parseInt(centigradeFeel);
+    currentTemp.textContent = "Minimum : " + parseInt(centigradeMin) + " " + "Maximum : " + parseInt(centigradeMax) + " " + "Current Temperature : " + parseInt(centigradeTemp);
 
+}
+
+export function DisplayFeel(feel) {
+
+    const currentFeel = document.getElementById("temperature-feel");
+    const centigradeFeel = feel - 273.15;
+    currentFeel.textContent = "Feels like : " + parseInt(centigradeFeel);
 }
 
 export function DisplayWeatherDesc(desc) {
@@ -162,21 +168,36 @@ export function DisplayWeatherDesc(desc) {
 
 export function DisplayRain(rain) {
 
-
+    alert(`Main:  ${rain} `);
     const currentRain = document.getElementById("rain");
-    currentRain.textContent = rain;
+    currentRain.textContent = rain + " mm";
 
 }
 
-export function DisplayLocalTime(timezone) {
+function isDayTime(currentTime, sunriseTime, sunsetTime) {
+
+    return currentTime > sunriseTime && currentTime < sunsetTime;
+
+}
+
+export function DisplayLocalTime(timezone, sunrise, sunset) {
 
 
     const currentTime = document.getElementById("location-time");
+    const timezoneOffset = timezone / 60;
     const timeUTC = new Date();
-    const localTime = timeUTC.getTime() + (timezone * 60000);
-    const currentLocalTime = new Date(localTime);
 
-    currentTime.textContent = currentLocalTime;
-    alert(`Main:  ${currentLocalTime} `);
+    const localTime = new Date(timeUTC.getTime() + (timezoneOffset * 60 * 1000) - (3600 * 1000))
+
+
+    currentTime.textContent = localTime;
+
+    if (!(isDayTime(localTime, sunrise, sunset))) {
+
+        document.body.style.backgroundImage = "url('../img/nighttime.jpg')";
+
+
+    }
+
 
 }

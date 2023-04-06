@@ -12,11 +12,30 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 grid-column-gap: 1rem;
 
-background-color: #162775;
+background-color: #123981;
 
 width: 100%;
 
 
+
+}
+
+.main-dashboard{
+
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-column-gap: 1rem;
+
+
+}
+
+.dashboard-component{
+    margin: 5%;
+    padding: 5%;
+    border-radius: 2%;
+    background-color: #ffffff1f;
+    backdrop-filter: blur(10px);
+    justify-content: center;
 
 }
 
@@ -27,6 +46,11 @@ width: 100%;
 
 }
 
+.link1{
+
+grid-row: span 3;
+
+}
 
 
 
@@ -41,9 +65,14 @@ width: 100%;
     font-family: 'Open Sans', sans-serif;
 
 }
+
+
+
 body{
 
 margin: 0;
-background: #62aad4;
+background-image: url(../img/daytime.jpg);
+background-size: cover;
+
 font-family: 'Open Sans', sans-serif;
 }
