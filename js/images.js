@@ -58,7 +58,7 @@ export function SetImage(newImage) {
             break;
 
         case 3:
-            img.src = dayRainy;
+            img.src = scatteredCloud;
             break;
 
         case 4:
