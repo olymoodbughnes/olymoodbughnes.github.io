@@ -10,6 +10,7 @@ window.onload = function () {
 
   chosenCity = prompt("Type 1 for London, Type 2 For Dover.")
   alert(chosenCity);
+
   if (chosenCity === "1") {
 
 

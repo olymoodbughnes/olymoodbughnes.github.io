@@ -1,5 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 h1{
 color: red;
 
 
+}
+
+.nav-container{
+
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-column-gap: 1rem;
+
+background-color: #162775;
+
+width: 100%;
+
+
+
+}
+
+.nav-item{
+    margin: 5% 10%;
+    list-style: none;
+    padding: auto;
+
+}
+
+
+
+
+.nav-item a {
+
+    /*Make links look like normal text*/
+    font-family: Arial, sans-serif;
+    border: 1px solid white; /* solid borders */
+    padding: 3% 8%;
+    color: white; /* black text color */   
+    text-decoration: none; /* remove any underlining */
+    font-family: 'Open Sans', sans-serif;
+
+}
+body{
+
+margin: 0;
+background: #62aad4;
+font-family: 'Open Sans', sans-serif;
 }
