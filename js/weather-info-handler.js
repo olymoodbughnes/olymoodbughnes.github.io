@@ -192,7 +192,10 @@ export function DisplayLocalTime(timezone, sunrise, sunset) {
 
     currentTime.textContent = localTime;
 
-    if (!(isDayTime(localTime, sunrise, sunset))) {
+    alert(`Main:  ${localTime.getTime()}, ${sunset + (timezoneOffset * 60 * 1000)},  ${sunrise + (timezoneOffset * 60 * 1000)}  `);
+
+
+    if (!(isDayTime(localTime, (sunrise + (timezoneOffset * 60 * 1000)), sunset + (timezoneOffset * 60 * 1000)))) {
 
         document.body.style.backgroundImage = "url('../img/nighttime.jpg')";
 

@@ -56,8 +56,8 @@ window.onload = function () {
       const weatherTempMax = data.main.temp_max;
       const weatherTempMin = data.main.temp_min;
       const weatherTempFeel = data.main.feels_like;
-      const sunriseTime = data.sys.sunrise;
-      const sunsetTime = data.sys.sunset;
+      const sunriseTime = data.sys.sunrise * 1000;
+      const sunsetTime = data.sys.sunset * 1000;
 
       //alert(`Main:  ${localTimezone} `);
 

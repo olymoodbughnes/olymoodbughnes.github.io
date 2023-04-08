@@ -8,6 +8,7 @@ color: red;
 
 .nav-container{
 
+
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 grid-column-gap: 1rem;
@@ -69,7 +70,7 @@ grid-row: span 3;
 
 
 body{
-
+color: black;
 margin: 0;
 background-image: url(../img/daytime.jpg);
 background-size: cover;
