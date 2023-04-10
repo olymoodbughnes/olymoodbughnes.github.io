@@ -3,13 +3,21 @@
 let img = document.createElement("img");
 img.src = "";
 
+let img2 = document.createElement("img");
+img2.src = "";
+
+let img3 = document.createElement("img");
+img3.src = "";
+
+
+
 
 //DYNAMIC IMAGES=============================================================================
 //This section points to the elements in the file that will have an image appended as a child.
 
 /*Page elements*/
 //Current time of day and general condition
-const currentGeneralConditions = document.getElementById("current-general-conditions");
+//let currentGeneralConditions = document.getElementById("current-general-conditions");
 
 /*Images Sources*/
 
@@ -41,73 +49,107 @@ const thunderstorm = "../img/thunderstorm.png";
 //Default
 const neutralDefault = "../img/blackHole.png";
 
+let imgToBeDisplayed = neutralDefault;
 //Image Functions============================================================================
 //Set Image
-export function SetImage(newImage) {
+export function SetImage(newImage, elementName) {
 
     switch (newImage) {
 
         case 1:
-            img.src = dayClear;
+            imgToBeDisplayed = dayClear;
 
             break;
 
         case 2:
-            img.src = dayPartCloudy;
+            imgToBeDisplayed = dayPartCloudy;
 
             break;
 
         case 3:
-            img.src = scatteredCloud;
+            imgToBeDisplayed = scatteredCloud;
             break;
 
         case 4:
-            img.src = mist;
+            imgToBeDisplayed = mist;
             break;
 
         case 5:
-            img.src = nighttimeClear;
+            imgToBeDisplayed = nighttimeClear;
             break;
 
         case 6:
-            img.src = nightimePartCloudy;
+            imgToBeDisplayed = nightimePartCloudy;
             break;
 
         case 7:
-            img.src = overcastClouds;
+            imgToBeDisplayed = overcastClouds;
             break;
 
         case 8:
-            img.src = rain;
+            imgToBeDisplayed = rain;
             break;
 
         case 9:
-            img.src = rainNight;
+            imgToBeDisplayed = rainNight;
             break;
 
         case 10:
-            img.src = scatteredCloud;
+            imgToBeDisplayed = scatteredCloud;
             break;
 
         case 11:
-            img.src = showerRain;
+            imgToBeDisplayed = showerRain;
             break;
 
         case 12:
-            img.src = snow;
+            imgToBeDisplayed = snow;
             break;
 
         case 13:
-            img.src = thunderstorm;
+            imgToBeDisplayed = thunderstorm;
             break;
 
         default:
-            img.src = neutralDefault;
+            imgToBeDisplayed = neutralDefault;
 
             break;
 
     }
-    img.style.width = "10rem"
-    currentGeneralConditions.appendChild(img);
+
+    let currentGeneralConditions = document.getElementById(elementName);
+
+    if (elementName == "current-general-conditions-first") {
+
+        img.src = imgToBeDisplayed;
+        img.style.width = "10rem"
+        img.setAttribute('id', 'first-image');
+        currentGeneralConditions.appendChild(img);
+
+
+    } else if (elementName == "current-general-conditions-second") {
+
+
+        img2.src = imgToBeDisplayed;
+        img2.style.width = "10rem"
+        img2.setAttribute('id', 'second-image');
+        img2.setAttribute('class', 'leave-dash');
+        currentGeneralConditions.appendChild(img2);
+
+    } else if (elementName == "current-general-conditions-third") {
+
+
+        img3.src = imgToBeDisplayed;
+        img3.style.width = "10rem"
+        img3.setAttribute('id', 'third-image');
+        img3.setAttribute('class', 'leave-dash');
+        currentGeneralConditions.appendChild(img3);
+
+    }
+
+
+
+
+
 
 }

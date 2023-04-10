@@ -1,5 +1,5 @@
 import { SetImage } from "./images.js";
-export function DisplayIcon(weatherCode, weatherIcon) {
+export function DisplayIcon(weatherCode, weatherIcon, elementName) {
 
 
 
@@ -8,33 +8,33 @@ export function DisplayIcon(weatherCode, weatherIcon) {
         //===========================THUNDERSTORM==============================
         case 200: case 201: case 202: case 210: case 211:
         case 212: case 221: case 230: case 231: case 232:
-            SetImage(13);
+            SetImage(13, elementName);
 
             break;
 
         //===========================DRIZZLE==============================
         case 300: case 301: case 302: case 310: case 311:
         case 312: case 313: case 314: case 321:
-            SetImage(11);
+            SetImage(11, elementName);
 
             break;
 
         //===========================RAIN==============================
         /*LIGHT RAIN, MODERATE RAIN, HEAVY INTENSITY RAIN, VERY HEAVY RAIN, EXTREME RAIN*/
         case 500: case 501: case 502: case 503: case 504:
-            SetImage(8);
+            SetImage(8, elementName);
 
             break;
 
         /*FREEZING RAIN*/
         case 511:
-            SetImage(12);
+            SetImage(12, elementName);
 
             break;
 
         /*LIGHT INTENSITY RAIN, SHOWER RAIN, HEAVY INTENSITY SHOWER RAIN, RAGGED SHOWER RAIN*/
         case 520: case 521: case 522: case 531:
-            SetImage(11);
+            SetImage(11, elementName);
 
             break;
 
@@ -43,7 +43,7 @@ export function DisplayIcon(weatherCode, weatherIcon) {
         case 600: case 601: case 602: case 611: case 612:
         case 613: case 615: case 616: case 620: case 621:
         case 622:
-            SetImage(12);
+            SetImage(12, elementName);
 
             break;
 
@@ -52,7 +52,7 @@ export function DisplayIcon(weatherCode, weatherIcon) {
         /*ATMOSPHERE RELATED*/
         case 701: case 711: case 721: case 731: case 741:
         case 751: case 761: case 762: case 771: case 781:
-            SetImage(4);
+            SetImage(4, elementName);
 
             break;
 
@@ -62,13 +62,13 @@ export function DisplayIcon(weatherCode, weatherIcon) {
 
             //If the icon indicates it's daytime
             if (weatherIcon === "01d") {
-                SetImage(1);
+                SetImage(1, elementName);
 
             }
 
             //If the icon indicates it's nighttime
             else {
-                SetImage(5);
+                SetImage(5, elementName);
 
             }
 
@@ -80,13 +80,13 @@ export function DisplayIcon(weatherCode, weatherIcon) {
         case 801:
             // If the icon indicates it's daytime
             if (weatherIcon === "02d") {
-                SetImage(2);
+                SetImage(2, elementName);
 
             }
 
             // If the icon indicates it's nighttime
             else {
-                SetImage(6);
+                SetImage(6, elementName);
 
             }
             break;
@@ -94,7 +94,7 @@ export function DisplayIcon(weatherCode, weatherIcon) {
         /*SCATTERED CLOUDS: 25-50%======================*/
         case 802:
 
-            SetImage(3);
+            SetImage(3, elementName);
 
 
 
@@ -104,7 +104,7 @@ export function DisplayIcon(weatherCode, weatherIcon) {
         /*BROKEN CLOUDS: 51-84% or OVERCAST CLOUDS: 85-100%======================*/
         case 803: case 804:
 
-            SetImage(4);
+            SetImage(4, elementName);
 
 
             break;
@@ -115,7 +115,7 @@ export function DisplayIcon(weatherCode, weatherIcon) {
 
         //===============NO CODE RECEIVED=====================
         default:
-            SetImage();
+            SetImage(38, elementName);
             break;
 
 
@@ -198,6 +198,7 @@ export function DisplayLocalTime(timezone, sunrise, sunset) {
     if (!(isDayTime(localTime, (sunrise + (timezoneOffset * 60 * 1000)), sunset + (timezoneOffset * 60 * 1000)))) {
 
         document.body.style.backgroundImage = "url('../img/nighttime.jpg')";
+        document.body.style.color = "white";
 
 
     }

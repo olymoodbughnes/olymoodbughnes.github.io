@@ -1,34 +1,22 @@
+
 import { SetImage } from "./images.js";
 import { DisplayIcon, DisplayLocationName, DisplayTemp, DisplayWeatherDesc, DisplayRain, DisplayLocalTime, DisplayFeel } from "./weather-info-handler.js";
+import { fetchSecond } from "./weather-info-second.js";
+import { changeIcon } from "./button-animation.js";
 
-const londonWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=51.5072&lon=-0.1276&appid=58173614dccdb2e31d9fee6b2beef1a1';
-const doverWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=-33.86&lon=151.21&appid=58173614dccdb2e31d9fee6b2beef1a1';
-const lasvegasWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=36.1699&lon=-115.1398&appid=58173614dccdb2e31d9fee6b2beef1a1';
+const firstLocWeather = 'London';
+const secondLocWeather = 'Dover';
+const thirdLocWeather = 'Las%20Vegas';
 let latlong = "";
 let chosenCity;
 window.onload = function () {
 
-  chosenCity = prompt("Type 1 for London, Type 2 For Dover.")
-  alert(chosenCity);
-
-  if (chosenCity === "1") {
+  // chosenCity = prompt("Type 1 for London, Type 2 For Dover.")
 
 
-    latlong = londonWeather;
-
-  } else if (chosenCity === "2") {
 
 
-    latlong = doverWeather;
-
-  } else {
-
-    latlong = lasvegasWeather;
-
-  }
-
-
-  fetch(latlong)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${firstLocWeather}&appid=f145874df71d960cea49d51f34cba9da`)
     .then(response => response.json())
     .then(data => {
 
@@ -59,18 +47,23 @@ window.onload = function () {
       const sunriseTime = data.sys.sunrise * 1000;
       const sunsetTime = data.sys.sunset * 1000;
 
+
+      const eIcon = "current-general-conditions-first";
+
+
       //alert(`Main:  ${localTimezone} `);
 
 
-      DisplayIcon(weatherID, weatherIcon);
+      DisplayIcon(weatherID, weatherIcon, eIcon);
       DisplayLocationName(weatherLocation);
       DisplayTemp(weatherTempMin, weatherTempMax, weatherTempCurrent);
       DisplayWeatherDesc(weatherDecscription);
       DisplayLocalTime(localTimezone, sunriseTime, sunsetTime);
       DisplayFeel(weatherTempFeel)
 
+      fetchSecond();
 
-
+      alert("HERE");
     })
     .catch(error => {
       console.error('Error retrieving data from API:', error);
