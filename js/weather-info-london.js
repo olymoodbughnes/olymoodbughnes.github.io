@@ -1,9 +1,9 @@
 import { SetImage } from "./images.js";
 import { DisplayIcon, DisplayLocationName, DisplayTemp, DisplayWeatherDesc, DisplayRain, DisplayLocalTime, DisplayFeel } from "./weather-info-handler.js";
 
-const londonWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=51.5072&lon=-0.1276&appid=58173614dccdb2e31d9fee6b2beef1a1';
-const doverWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=-33.86&lon=151.21&appid=58173614dccdb2e31d9fee6b2beef1a1';
-const lasvegasWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=36.1699&lon=-115.1398&appid=58173614dccdb2e31d9fee6b2beef1a1';
+const londonWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=51.5072&lon=-0.1276&appid=f145874df71d960cea49d51f34cba9da';
+const doverWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=-33.86&lon=151.21&appid=f145874df71d960cea49d51f34cba9da';
+const lasvegasWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=36.1699&lon=-115.1398&appid=f145874df71d960cea49d51f34cba9da';
 let latlong = "";
 let chosenCity;
 window.onload = function () {
