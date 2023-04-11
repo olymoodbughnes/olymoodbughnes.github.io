@@ -122,8 +122,10 @@ export function SetImage(newImage, elementName) {
     if (elementName == "current-general-conditions-first") {
 
         img.src = imgToBeDisplayed;
-        img.style.width = "10rem"
+        img.style.width = "10rem";
+
         img.setAttribute('id', 'first-image');
+
         currentGeneralConditions.appendChild(img);
 
 
@@ -131,7 +133,8 @@ export function SetImage(newImage, elementName) {
 
 
         img2.src = imgToBeDisplayed;
-        img2.style.width = "10rem"
+        img2.style.width = "10rem";
+
         img2.setAttribute('id', 'second-image');
         img2.setAttribute('class', 'leave-dash');
         currentGeneralConditions.appendChild(img2);
@@ -140,7 +143,8 @@ export function SetImage(newImage, elementName) {
 
 
         img3.src = imgToBeDisplayed;
-        img3.style.width = "10rem"
+        img3.style.width = "10rem";
+
         img3.setAttribute('id', 'third-image');
         img3.setAttribute('class', 'leave-dash');
         currentGeneralConditions.appendChild(img3);
