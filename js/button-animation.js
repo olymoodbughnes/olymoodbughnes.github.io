@@ -1,4 +1,4 @@
-import { fetchFirstDetails } from "./weather-info-London.js";
+import { fetchFirstDetails } from "./weather-info-london.js";
 import { fetchSecondDetails } from "./weather-info-second.js";
 import { fetchThirdDetails } from "./weather-info-third.js";
 
