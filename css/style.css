@@ -28,6 +28,7 @@ grid-template-columns: 1fr 1fr 1fr;
 grid-column-gap: 1rem;
 
 
+
 }
 
 .dashboard-component{
@@ -38,7 +39,8 @@ grid-column-gap: 1rem;
     background-color: #ffffff1f;
     backdrop-filter: blur(10px);
     justify-content: center;
-
+    min-height: 100%;
+  
 }
 
 
@@ -84,24 +86,6 @@ font-family: 'Open Sans', sans-serif;
 }
 
 
-.firstImg{
-
-    display: inline;
-    width: 10rem;
-}
-
-.secondImg {
-
-    display: none;
-
-}
-
-
-.thirdImg {
-
-    display: none;
-
-}
 
 /*PARENT ARROW CONTAINER*/
 .arrow-right{
@@ -155,12 +139,24 @@ button{
 }
 
 
-.first-image{
+.first-image {
 
     opacity: 1;
-   
+   position: absolute;
+    z-index: 1;
 
+}
 
+.second-image {
+
+    position: absolute;
+    z-index: 2;
+}
+
+.third-image{
+
+    position: absolute;
+    z-index: 3;
 }
 
 @keyframes change-icon {
@@ -202,3 +198,24 @@ display: none;
         opacity: 1;
       }
 }
+
+
+.fade-text{
+    
+    animation-name: fade-effect;
+    animation-duration: 1s;
+    
+    
+    }
+
+@keyframes fade-effect {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+      }
+      100% {
+        filter: blur(0px);
+        opacity: 1;
+      }
+    }
+    

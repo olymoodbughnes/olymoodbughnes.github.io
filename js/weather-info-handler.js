@@ -136,6 +136,7 @@ export function DisplayLocationName(locationName) {
 
 
     const currentLocationName = document.getElementById("weather-location-name");
+    currentLocationName.textContent = "";
     currentLocationName.textContent = locationName;
 
 }
@@ -147,6 +148,7 @@ export function DisplayTemp(min, max, temp) {
     const centigradeMin = min - 273.15;
     const centigradeMax = max - 273.15;
     const centigradeTemp = temp - 273.15;
+    currentTemp.textContent = "";
     currentTemp.textContent = "Minimum : " + parseInt(centigradeMin) + " " + "Maximum : " + parseInt(centigradeMax) + " " + "Current Temperature : " + parseInt(centigradeTemp);
 
 }
@@ -155,6 +157,7 @@ export function DisplayFeel(feel) {
 
     const currentFeel = document.getElementById("temperature-feel");
     const centigradeFeel = feel - 273.15;
+    currentFeel.textContent = "";
     currentFeel.textContent = "Feels like : " + parseInt(centigradeFeel);
 }
 
@@ -162,14 +165,16 @@ export function DisplayWeatherDesc(desc) {
 
 
     const currentWeatherDesc = document.getElementById("weather-description");
+    currentWeatherDesc.textContent = "";
     currentWeatherDesc.textContent = desc;
 
 }
 
 export function DisplayRain(rain) {
 
-    alert(`Main:  ${rain} `);
+
     const currentRain = document.getElementById("rain");
+    currentRain.textContent = "";
     currentRain.textContent = rain + " mm";
 
 }
@@ -189,10 +194,10 @@ export function DisplayLocalTime(timezone, sunrise, sunset) {
 
     const localTime = new Date(timeUTC.getTime() + (timezoneOffset * 60 * 1000) - (3600 * 1000))
 
-
+    currentTime.textContent = "";
     currentTime.textContent = localTime;
 
-    alert(`Main:  ${localTime.getTime()}, ${sunset + (timezoneOffset * 60 * 1000)},  ${sunrise + (timezoneOffset * 60 * 1000)}  `);
+
 
 
     if (!(isDayTime(localTime, (sunrise + (timezoneOffset * 60 * 1000)), sunset + (timezoneOffset * 60 * 1000)))) {
@@ -201,6 +206,9 @@ export function DisplayLocalTime(timezone, sunrise, sunset) {
         document.body.style.color = "white";
 
 
+    } else {
+        document.body.style.backgroundImage = "url('../img/daytime.jpg')";
+        document.body.style.color = "black";
     }
 
 
