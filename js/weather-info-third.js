@@ -1,7 +1,8 @@
+
 import { changeIcon } from "./button-animation.js";
 import { DisplayIcon, DisplayLocationName, DisplayTemp, DisplayWeatherDesc, DisplayRain, DisplayLocalTime, DisplayFeel } from "./weather-info-handler.js";
-changeIcon
-const thirdLocWeather = 'Las%20Vegas';
+
+let thirdLocWeather = 'Las%20Vegas';
 
 
 let skip = true;
@@ -58,6 +59,19 @@ export function fetchThirdDetails() {
             const weatherLocation = data.name;
             const localTimezone = data.timezone;
 
+            const weatherID = data.weather[0].id;
+            const weatherIcon = data.weather[0].icon;
+            const eIcon = "current-general-conditions-third";
+
+            if (weatherDecscription.includes("rain") || weatherDecscription.includes("Rain")) {
+
+                const localRain = data.rain["1h"];
+                DisplayRain(localRain);
+            }
+
+
+            DisplayIcon(weatherID, weatherIcon, eIcon);
+
 
 
             DisplayLocationName(weatherLocation);
@@ -74,5 +88,10 @@ export function fetchThirdDetails() {
             console.error('Error retrieving data from API:', error);
         });
 
+
+}
+
+export function setLocationThree(newLoc) {
+    thirdLocWeather = newLoc;
 
 }

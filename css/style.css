@@ -31,7 +31,7 @@ grid-column-gap: 1rem;
 
 }
 
-.dashboard-component{
+.dashboard-component, .dashboard-component-country-select{
     text-align: center;
     margin: 5%;
     padding: 5%;
@@ -44,7 +44,30 @@ grid-column-gap: 1rem;
   
 }
 
+.dashboard-component-country-select{
 
+    grid-column: 2;
+}
+
+.city-options{
+padding-top: 20%;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-column-gap: 1rem;
+
+    
+    }
+
+.change-city{
+
+    background-color: #ffffff1f;
+
+}
+
+.change-city:hover{
+
+    cursor: pointer;
+}
 
 #temperature{
 
@@ -134,6 +157,10 @@ button{
 
 }
 
+button:hover {
+    cursor: pointer;
+  }
+
 
 
 
@@ -145,10 +172,11 @@ button{
 
 
 #first-image, #second-image, #third-image {
-
+    
     position: absolute;
    
-    left: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
  
 }
 

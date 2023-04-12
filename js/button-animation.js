@@ -107,7 +107,7 @@ function removeFinalState(element) {
 
 
     element.addEventListener('animationend', () => removeFinalListener(element));
-
+    //Update Location Icon
 
 
 
@@ -119,6 +119,10 @@ function removeFinalListener(elem) {
 
     elem.classList.remove('animate-icon-entry');
     elem.classList.remove('leave-dash');
+
+
+
+
 
 }
 

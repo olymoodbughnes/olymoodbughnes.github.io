@@ -1,6 +1,8 @@
+
 import { DisplayIcon, DisplayLocationName, DisplayTemp, DisplayWeatherDesc, DisplayRain, DisplayLocalTime, DisplayFeel } from "./weather-info-handler.js";
 import { fetchThird } from "./weather-info-third.js";
-const secondLocWeather = 'Sydney';
+
+let secondLocWeather = 'Sydney';
 
 export function fetchSecond() {
 
@@ -45,6 +47,17 @@ export function fetchSecondDetails() {
             const localTimezone = data.timezone;
 
 
+            const weatherID = data.weather[0].id;
+            const weatherIcon = data.weather[0].icon;
+            const eIcon = "current-general-conditions-second";
+            if (weatherDecscription.includes("rain") || weatherDecscription.includes("Rain")) {
+
+                const localRain = data.rain["1h"];
+                DisplayRain(localRain);
+            }
+
+            DisplayIcon(weatherID, weatherIcon, eIcon);
+
 
             DisplayLocationName(weatherLocation);
             DisplayTemp(weatherTempMin, weatherTempMax, weatherTempCurrent);
@@ -60,5 +73,10 @@ export function fetchSecondDetails() {
             console.error('Error retrieving data from API:', error);
         });
 
+
+}
+
+export function setLocationTwo(newLoc) {
+    secondLocWeather = newLoc;
 
 }

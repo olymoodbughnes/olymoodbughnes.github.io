@@ -136,7 +136,7 @@ export function SetImage(newImage, elementName) {
         img2.style.width = "10rem";
 
         img2.setAttribute('id', 'second-image');
-        img2.setAttribute('class', 'leave-dash');
+
         currentGeneralConditions.appendChild(img2);
 
     } else if (elementName == "current-general-conditions-third") {
@@ -146,7 +146,7 @@ export function SetImage(newImage, elementName) {
         img3.style.width = "10rem";
 
         img3.setAttribute('id', 'third-image');
-        img3.setAttribute('class', 'leave-dash');
+
         currentGeneralConditions.appendChild(img3);
 
     }
@@ -155,5 +155,13 @@ export function SetImage(newImage, elementName) {
 
 
 
+
+}
+
+
+export function oneTimeDisplayinator() {
+
+    img2.setAttribute('class', 'leave-dash');
+    img3.setAttribute('class', 'leave-dash');
 
 }
