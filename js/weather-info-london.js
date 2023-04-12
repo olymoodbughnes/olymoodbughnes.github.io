@@ -30,7 +30,7 @@ window.onload = function () {
     const cookie = cookies[i].split("=");
     if (cookie[0] === "myCity2") {
       const cityCookie2 = cookie[1];
-      alert(cityCookie2);
+
       setLocationTwo(cityCookie2);
       secondLocWeather = cityCookie2;
       break;
