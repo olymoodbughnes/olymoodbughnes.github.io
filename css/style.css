@@ -31,7 +31,7 @@ grid-column-gap: 1rem;
 
 }
 
-.dashboard-component, .dashboard-component-country-select{
+.dashboard-component, .dashboard-component-country-select, .show-options-button{
     text-align: center;
     margin: 5%;
     padding: 5%;
@@ -45,7 +45,7 @@ grid-column-gap: 1rem;
 }
 
 .dashboard-component-country-select{
-
+    display: none;
     grid-column: 2;
 }
 
@@ -54,6 +54,7 @@ padding-top: 20%;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-column-gap: 1rem;
+row-gap: 5rem;
 
     
     }
@@ -61,14 +62,37 @@ grid-column-gap: 1rem;
 .change-city{
 
     background-color: #ffffff1f;
-
+    
 }
+
+.close-options{
+    font-size: 1.3rem;
+    grid-column: 2;
+    background-color: #b623238c;
+    border-radius: 5px;
+}
+
+
+
 
 .change-city:hover{
 
     cursor: pointer;
 }
 
+.show-options-button{
+    font-size: 1.3rem;
+    padding: 0%;
+    grid-column: 2 ;
+    text-align: center;
+    transition: background-color 0.12s ease;
+}
+
+.show-options-button p {
+
+    padding-top: 3%;
+
+}
 #temperature{
 
 padding-top: 12rem;
@@ -108,7 +132,7 @@ body{
 color: black;
 margin: 0;
 background-image: url(../img/daytime.jpg);
-background-size: cover;
+background-size:cover;
 
 font-family: 'Open Sans', sans-serif;
 }
@@ -138,10 +162,10 @@ font-family: 'Open Sans', sans-serif;
     
     }
     
-.arrow-right img:hover{
+.arrow-right img:hover, .show-options-button:hover, .close-options:hover{
 
     background-color: #5a5a5a5e;
-
+    cursor: pointer;
 
 }
 

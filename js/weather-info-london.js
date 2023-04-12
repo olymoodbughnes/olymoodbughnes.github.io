@@ -7,8 +7,8 @@ import { getCity } from "./button-actions.js";
 import { fetchThirdDetails, setLocationThree } from "./weather-info-third.js";
 
 let firstLocWeather = 'Dover';
-const secondLocWeather = 'Dover';
-const thirdLocWeather = 'Las%20Vegas';
+let secondLocWeather = 'Dover';
+let thirdLocWeather = 'Las%20Vegas';
 let latlong = "";
 let chosenCity;
 window.onload = function () {
@@ -17,8 +17,8 @@ window.onload = function () {
   const cookies = document.cookie.split("; ");
   for (let i = 0; i < cookies.length; i++) {
     const cookie = cookies[i].split("=");
-    if (cookie[0] === "myCity1" && decodeURIComponent(cookie[1]).indexOf('dlpWeather/') !== -1) {
-      const cityCookie1 = decodeURIComponent(cookie[1].substring(0, cookie[1].indexOf(';')));
+    if (cookie[0] === "myCity1") {
+      const cityCookie1 = cookie[1];
       setLocationOne(cityCookie1);
       break;
     } else {
@@ -28,9 +28,11 @@ window.onload = function () {
 
   for (let i = 0; i < cookies.length; i++) {
     const cookie = cookies[i].split("=");
-    if (cookie[0] === "myCity2" && decodeURIComponent(cookie[1]).indexOf('dlpWeather/') !== -1) {
-      const cityCookie2 = decodeURIComponent(cookie[1].substring(0, cookie[1].indexOf(';')));
+    if (cookie[0] === "myCity2") {
+      const cityCookie2 = cookie[1];
+      alert(cityCookie2);
       setLocationTwo(cityCookie2);
+      secondLocWeather = cityCookie2;
       break;
     } else {
       setLocationTwo("Dover");
@@ -39,9 +41,10 @@ window.onload = function () {
 
   for (let i = 0; i < cookies.length; i++) {
     const cookie = cookies[i].split("=");
-    if (cookie[0] === "myCity3" && decodeURIComponent(cookie[1]).indexOf('dlpWeather/') !== -1) {
-      const cityCookie3 = decodeURIComponent(cookie[1].substring(0, cookie[1].indexOf(';')));
+    if (cookie[0] === "myCity3") {
+      const cityCookie3 = cookie[1];
       setLocationThree(cityCookie3);
+      thirdLocWeather = cityCookie3;
       break;
     } else {
       setLocationThree("Portsmouth");
@@ -49,20 +52,26 @@ window.onload = function () {
   }
 
 
-  // chosenCity = prompt("Type 1 for London, Type 2 For Dover.")
+
   const changeCityOneButton = document.getElementById("city-one");
   const changeCityTwoButton = document.getElementById("city-two");
   const changeCityThreeButton = document.getElementById("city-three");
   const inputCity = document.getElementById("city");
 
+  const showCityOptions = document.getElementById("show-options-city");
+  const cityOptions = document.getElementById("city-select");
+  const closeCityOptions = document.getElementById("close-city-options");
 
+  changeCityOneButton.textContent = firstLocWeather.toUpperCase();
+  changeCityTwoButton.textContent = secondLocWeather.toUpperCase();
+  changeCityThreeButton.textContent = thirdLocWeather.toUpperCase();
 
   changeCityOneButton.addEventListener('click', () => {
     const city = inputCity.value;
     setLocationOne(city);
     changeCityOneButton.textContent = "";
     changeCityOneButton.textContent = city;
-    document.cookie = "myCity1=" + city + "; expires=" + new Date(new Date().getTime() + 31536000000).toUTCString() + "; path=/dlpWeather/";
+    document.cookie = "myCity1=" + city + "; expires=" + new Date(new Date().getTime() + 31536000000).toUTCString() + "; path=/";
 
 
   });
@@ -71,7 +80,7 @@ window.onload = function () {
     setLocationTwo(city);
     changeCityTwoButton.textContent = "";
     changeCityTwoButton.textContent = city;
-    document.cookie = "myCity2=" + city + "; expires=" + new Date(new Date().getTime() + 31536000000).toUTCString() + "; path=/dlpWeather/";
+    document.cookie = "myCity2=" + city + "; expires=" + new Date(new Date().getTime() + 31536000000).toUTCString() + "; path=/";
 
   });
   changeCityThreeButton.addEventListener('click', () => {
@@ -79,10 +88,24 @@ window.onload = function () {
     setLocationThree(city);
     changeCityThreeButton.textContent = "";
     changeCityThreeButton.textContent = city;
-    document.cookie = "myCity3=" + city + "; expires=" + new Date(new Date().getTime() + 31536000000).toUTCString() + "; path=/dlpWeather/";
+    document.cookie = "myCity3=" + city + "; expires=" + new Date(new Date().getTime() + 31536000000).toUTCString() + "; path=/";
 
   });
 
+
+  showCityOptions.addEventListener('click', () => {
+
+    showCityOptions.style.display = "none";
+    cityOptions.style.display = "block";
+
+  })
+
+  closeCityOptions.addEventListener('click', () => {
+    cityOptions.style.display = "none";
+    showCityOptions.style.display = "block";
+
+
+  })
 
   removeTextAnimation(document.getElementById("weather-location-name"));
   removeTextAnimation(document.getElementById("location-time"));
