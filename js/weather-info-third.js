@@ -14,7 +14,15 @@ export function fetchThird() {
 
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${thirdLocWeather}&appid=f145874df71d960cea49d51f34cba9da`)
-        .then(response => response.json())
+        .then(response => {
+
+            if (!response.ok) {
+
+                throw new Error('City not found');
+            }
+            return response.json()
+        })
+
         .then(data => {
 
 
@@ -33,6 +41,10 @@ export function fetchThird() {
         })
         .catch(error => {
             console.error('Error retrieving data from API:', error);
+
+
+            document.getElementById("temperature").textContent = "City data cannot be found or does not exist. Check spelling or name for errors.";
+            thirdLocWeather = "luton";
         });
     if (skip) {
         changeIcon();
@@ -47,8 +59,18 @@ export function fetchThird() {
 export function fetchThirdDetails() {
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${thirdLocWeather}&appid=f145874df71d960cea49d51f34cba9da`)
-        .then(response => response.json())
+        .then(response => {
+
+            if (!response.ok) {
+
+                throw new Error('City not found');
+            }
+            return response.json()
+        })
+
         .then(data => {
+
+
             const weatherDecscription = data.weather[0].description;
             const weatherTempCurrent = data.main.temp;
             const weatherTempMax = data.main.temp_max;
@@ -67,7 +89,12 @@ export function fetchThirdDetails() {
 
                 const localRain = data.rain["1h"];
                 DisplayRain(localRain);
+            } else {
+
+                document.getElementById("rain").textContent = "No rain";
+
             }
+
 
 
             DisplayIcon(weatherID, weatherIcon, eIcon);
@@ -86,6 +113,9 @@ export function fetchThirdDetails() {
         })
         .catch(error => {
             console.error('Error retrieving data from API:', error);
+
+            document.getElementById("temperature").textContent = "City data cannot be found or does not exist. Check spelling or name for errors.";
+            thirdLocWeather = "las&20vegas";
         });
 
 

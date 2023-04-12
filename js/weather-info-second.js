@@ -12,7 +12,14 @@ export function fetchSecond() {
 
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${secondLocWeather}&appid=f145874df71d960cea49d51f34cba9da`)
-        .then(response => response.json())
+        .then(response => {
+
+            if (!response.ok) {
+
+                throw new Error('City not found');
+            }
+            return response.json()
+        })
         .then(data => {
 
             const weatherID = data.weather[0].id;
@@ -28,6 +35,8 @@ export function fetchSecond() {
         })
         .catch(error => {
             console.error('Error retrieving data from API:', error);
+            document.getElementById("temperature").textContent = "City data cannot be found or does not exist. Check spelling or name for errors.";
+
         });
 }
 
@@ -36,6 +45,8 @@ export function fetchSecondDetails() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${secondLocWeather}&appid=f145874df71d960cea49d51f34cba9da`)
         .then(response => response.json())
         .then(data => {
+
+
             const weatherDecscription = data.weather[0].description;
             const weatherTempCurrent = data.main.temp;
             const weatherTempMax = data.main.temp_max;
@@ -54,10 +65,14 @@ export function fetchSecondDetails() {
 
                 const localRain = data.rain["1h"];
                 DisplayRain(localRain);
+            } else {
+
+                document.getElementById("rain").textContent = "No rain";
+
             }
 
-            DisplayIcon(weatherID, weatherIcon, eIcon);
 
+            DisplayIcon(weatherID, weatherIcon, eIcon);
 
             DisplayLocationName(weatherLocation);
             DisplayTemp(weatherTempMin, weatherTempMax, weatherTempCurrent);
@@ -71,6 +86,7 @@ export function fetchSecondDetails() {
         })
         .catch(error => {
             console.error('Error retrieving data from API:', error);
+
         });
 
 

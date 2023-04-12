@@ -167,3 +167,23 @@ function fadeText() {
 
 
 }
+
+export function updateIfHere() {
+
+    const img = document.querySelector(".arrow-select");
+    if (img.classList.contains('first-arrow')) {
+
+
+        fetchFirstDetails();
+    } else if (img.classList.contains('second-arrow')) {
+
+        fetchSecondDetails();
+    } else if (img.classList.contains('third-arrow')) {
+
+        fetchThirdDetails();
+
+
+    }
+
+
+}

@@ -4,6 +4,7 @@ export function DisplayIcon(weatherCode, weatherIcon, elementName) {
 
 
 
+
     switch (weatherCode) {
         //===========================THUNDERSTORM==============================
         case 200: case 201: case 202: case 210: case 211:

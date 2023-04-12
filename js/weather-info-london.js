@@ -2,7 +2,7 @@
 import { SetImage, oneTimeDisplayinator } from "./images.js";
 import { DisplayIcon, DisplayLocationName, DisplayTemp, DisplayWeatherDesc, DisplayRain, DisplayLocalTime, DisplayFeel } from "./weather-info-handler.js";
 import { fetchSecond, fetchSecondDetails, setLocationTwo } from "./weather-info-second.js";
-import { changeIcon } from "./button-animation.js";
+import { changeIcon, updateIfHere } from "./button-animation.js";
 import { getCity } from "./button-actions.js";
 import { fetchThirdDetails, setLocationThree } from "./weather-info-third.js";
 
@@ -68,27 +68,117 @@ window.onload = function () {
 
   changeCityOneButton.addEventListener('click', () => {
     const city = inputCity.value;
-    setLocationOne(city);
-    changeCityOneButton.textContent = "";
-    changeCityOneButton.textContent = city;
-    document.cookie = "myCity1=" + city + "; expires=" + new Date(new Date().getTime() + 31536000000).toUTCString() + "; path=/";
+
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f145874df71d960cea49d51f34cba9da`)
+      .then(response => {
+
+        if (!response.ok) {
+
+          throw new Error('City not found');
+
+        } else {
+
+          setLocationOne(city);
+          changeCityOneButton.textContent = "";
+          changeCityOneButton.textContent = city.toUpperCase();
+          document.cookie = "myCity1=" + city + "; expires=" + new Date(new Date().getTime() + 31536000000).toUTCString() + "; path=/";
+          updateIfHere();
+        }
+
+        return response.json();
+      })
+
+      .catch(error => {
+
+        console.error('Error retrieving data from API:', error);
+        document.getElementById("temperature").textContent = "City data cannot be found or does not exist. Check spelling or name for errors.";
+
+
+      });
+
+
+
+
+
+
 
 
   });
+
   changeCityTwoButton.addEventListener('click', () => {
     const city = inputCity.value;
-    setLocationTwo(city);
-    changeCityTwoButton.textContent = "";
-    changeCityTwoButton.textContent = city;
-    document.cookie = "myCity2=" + city + "; expires=" + new Date(new Date().getTime() + 31536000000).toUTCString() + "; path=/";
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f145874df71d960cea49d51f34cba9da`)
+      .then(response => {
+
+        if (!response.ok) {
+
+          throw new Error('City not found');
+
+        } else {
+          setLocationTwo(city);
+          changeCityTwoButton.textContent = "";
+          changeCityTwoButton.textContent = city.toUpperCase();
+          document.cookie = "myCity2=" + city + "; expires=" + new Date(new Date().getTime() + 31536000000).toUTCString() + "; path=/";
+          updateIfHere();
+        }
+
+        return response.json();
+      })
+
+      .catch(error => {
+
+        console.error('Error retrieving data from API:', error);
+        document.getElementById("temperature").textContent = "City data cannot be found or does not exist. Check spelling or name for errors.";
+
+
+      });
+
+
+
+
+
+
+
+
+
+
 
   });
   changeCityThreeButton.addEventListener('click', () => {
     const city = inputCity.value;
-    setLocationThree(city);
-    changeCityThreeButton.textContent = "";
-    changeCityThreeButton.textContent = city;
-    document.cookie = "myCity3=" + city + "; expires=" + new Date(new Date().getTime() + 31536000000).toUTCString() + "; path=/";
+
+
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f145874df71d960cea49d51f34cba9da`)
+      .then(response => {
+
+        if (!response.ok) {
+
+          throw new Error('City not found');
+
+        } else {
+          setLocationThree(city);
+          changeCityThreeButton.textContent = "";
+          changeCityThreeButton.textContent = city.toUpperCase();
+          document.cookie = "myCity3=" + city + "; expires=" + new Date(new Date().getTime() + 31536000000).toUTCString() + "; path=/";
+          updateIfHere();
+        }
+
+        return response.json();
+      })
+
+      .catch(error => {
+
+        console.error('Error retrieving data from API:', error);
+        document.getElementById("temperature").textContent = "City data cannot be found or does not exist. Check spelling or name for errors.";
+
+
+      });
+
+
+
 
   });
 
@@ -116,10 +206,15 @@ window.onload = function () {
 
 
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${firstLocWeather}&appid=f145874df71d960cea49d51f34cba9da`)
-    .then(response => response.json())
+    .then(response => {
+
+      if (!response.ok) {
+
+        throw new Error('City not found');
+      }
+      return response.json()
+    })
     .then(data => {
-
-
 
 
 
@@ -137,6 +232,10 @@ window.onload = function () {
 
         const localRain = data.rain["1h"];
         DisplayRain(localRain);
+      } else {
+
+        document.getElementById("rain").textContent = "No rain";
+
       }
 
       const weatherTempCurrent = data.main.temp;
@@ -165,6 +264,10 @@ window.onload = function () {
     })
     .catch(error => {
       console.error('Error retrieving data from API:', error);
+
+      document.getElementById("temperature").textContent = "City data cannot be found or does not exist. Check spelling or name for errors.";
+      firstLocWeather = "dover";
+      fetchFirstDetails();
     });
 }
 
@@ -174,11 +277,17 @@ export function fetchFirstDetails() {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${firstLocWeather}&appid=f145874df71d960cea49d51f34cba9da`)
     .then(response => response.json())
     .then(data => {
+
+
+
       const weatherDecscription = data.weather[0].description;
+
       const weatherTempCurrent = data.main.temp;
+
       const weatherTempMax = data.main.temp_max;
       const weatherTempMin = data.main.temp_min;
       const weatherTempFeel = data.main.feels_like;
+
       const sunriseTime = data.sys.sunrise * 1000;
       const sunsetTime = data.sys.sunset * 1000;
       const weatherLocation = data.name;
@@ -187,17 +296,21 @@ export function fetchFirstDetails() {
       const weatherID = data.weather[0].id;
       const weatherIcon = data.weather[0].icon;
       const eIcon = "current-general-conditions-first";
+
       if (weatherDecscription.includes("rain") || weatherDecscription.includes("Rain")) {
 
         const localRain = data.rain["1h"];
         DisplayRain(localRain);
+      } else {
+
+        document.getElementById("rain").textContent = "No rain";
+
       }
 
 
 
+
       DisplayIcon(weatherID, weatherIcon, eIcon);
-
-
       DisplayLocationName(weatherLocation);
       DisplayTemp(weatherTempMin, weatherTempMax, weatherTempCurrent);
       DisplayWeatherDesc(weatherDecscription);
@@ -210,6 +323,8 @@ export function fetchFirstDetails() {
     })
     .catch(error => {
       console.error('Error retrieving data from API:', error);
+
+
     });
 
 
