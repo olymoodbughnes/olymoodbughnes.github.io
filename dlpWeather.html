@@ -38,26 +38,30 @@
     <div class="main-dashboard">
   
 <div class = "dashboard-component">
-   <article id = "weather-location-name">
-   </article>  
-
-   <article id = "location-time">
+  
+   <article id = "weather-description" class = "weather-details">
+</article>
+   <article id = "location-time" class = "location-details">
     </article>  
 
-    <article id = "temperature-feel">
+    <article id = "temperature-feel" class = "location-details">
         
     </article>  
 
-    <article id = "rain">No rain
+    <article id = "rain" class = "location-details">No rain
     </article> 
 
-    <article id = "weather-description">
-    </article>
+    
 </div>
 
 
 
-<div class = "dashboard-component">
+<div class = "dashboard-component ">
+    
+    <article id = "weather-location-name" class = "location-name">
+    </article>  
+
+    <div class = "weather-icon">
     <article id = "current-general-conditions-first">
       
     </article>
@@ -68,8 +72,14 @@
         
     </article>
 
-   <article id = "temperature">
-    </article>  
+   
+    </div>
+
+    <div class = "temperature-section">
+        <article id = "temperature">
+        </article>  
+    </div>
+    
 </div>
    
 
@@ -90,9 +100,10 @@
 <div id = "show-options-city" class = "show-options-button"><p>click here to change locations</p> </div>
 
 <div id = "city-select" class = "dashboard-component-country-select">
+    <p>Enter a name and click on the slot you would like to change:</p>
     <input type="text" id="city" name="city" placeholder="New city">
     
-<p>Click on the city you would like to change</p>
+
 
     <div class = "city-options">
     

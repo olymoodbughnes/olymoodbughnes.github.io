@@ -150,7 +150,9 @@ export function DisplayTemp(min, max, temp) {
     const centigradeMax = max - 273.15;
     const centigradeTemp = temp - 273.15;
     currentTemp.textContent = "";
-    currentTemp.textContent = "Minimum : " + parseInt(centigradeMin) + " " + "Maximum : " + parseInt(centigradeMax) + " " + "Current Temperature : " + parseInt(centigradeTemp);
+    currentTemp.textContent = "Current Temperature :" + parseInt(centigradeTemp) + "\r\n";
+    currentTemp.textContent += "Maximum : " + parseInt(centigradeMax) + "\r\n";
+    currentTemp.textContent += "Minimum : " + parseInt(centigradeMin);
 
 }
 

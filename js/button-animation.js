@@ -6,11 +6,22 @@ import { fetchThirdDetails } from "./weather-info-third.js";
 export function changeIcon() {
 
     const img = document.querySelector(".arrow-select");
+    const showCityOptions = document.getElementById("show-options-city");
+    const cityOptions = document.getElementById("city-select");
 
 
 
 
     img.addEventListener('click', () => {
+
+
+        if (!(cityOptions.style.display == "none")) {
+
+            cityOptions.style.display = "none";
+            showCityOptions.style.display = "block";
+
+        }
+
         let currentImg = "";
         let nextImg = "";
         let prevImg = "";
