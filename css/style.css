@@ -15,7 +15,7 @@ grid-column-gap: 1rem;
 grid-row: 1rem;
 background-color: #123981;
 
-width: 100%;
+width: auto;
 
 
 
@@ -450,10 +450,10 @@ display: none;
     .nav-container{
         text-align: center;
         grid-template-columns:none;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 6fr);
        
         background-color: #123981;
-        width: 100%;
+        width:100vw;
              }
     .dashboard-component-country-select{
                 display: none;
