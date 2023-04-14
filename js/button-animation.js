@@ -13,7 +13,8 @@ export function changeIcon() {
 
 
     img.addEventListener('click', () => {
-
+        document.getElementById("error-message").textContent = "Enter a name and click on the slot you would like to change:";
+        document.getElementById("error-message").style.color = "black";
 
         if (!(cityOptions.style.display == "none")) {
 
@@ -175,8 +176,8 @@ function fadeText() {
     document.getElementById("rain").classList.add('fade-text');
     document.getElementById("weather-description").classList.add('fade-text');
     document.getElementById("temperature").classList.add('fade-text');
-
-
+    document.getElementById("temperature-maximum").classList.add('fade-text');
+    document.getElementById("temperature-minimum").classList.add('fade-text');
 }
 
 export function updateIfHere() {

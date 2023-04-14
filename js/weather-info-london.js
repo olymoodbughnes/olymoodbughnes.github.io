@@ -92,15 +92,15 @@ window.onload = function () {
       .catch(error => {
 
         console.error('Error retrieving data from API:', error);
-        document.getElementById("temperature").textContent = "City data cannot be found or does not exist. Check spelling or name for errors.";
-
+        document.getElementById("error-message").textContent = "City data cannot be found or does not exist.";
+        document.getElementById("error-message").style.color = "red";
 
       });
 
 
 
 
-
+    inputCity.value = "";
 
 
 
@@ -130,7 +130,8 @@ window.onload = function () {
       .catch(error => {
 
         console.error('Error retrieving data from API:', error);
-        document.getElementById("temperature").textContent = "City data cannot be found or does not exist. Check spelling or name for errors.";
+        document.getElementById("error-message").textContent = "City data cannot be found or does not exist.";
+        document.getElementById("error-message").style.color = "red";
 
 
       });
@@ -140,7 +141,7 @@ window.onload = function () {
 
 
 
-
+    inputCity.value = "";
 
 
 
@@ -172,13 +173,15 @@ window.onload = function () {
       .catch(error => {
 
         console.error('Error retrieving data from API:', error);
-        document.getElementById("temperature").textContent = "City data cannot be found or does not exist. Check spelling or name for errors.";
+
+        document.getElementById("error-message").textContent = "City data cannot be found or does not exist.";
+        document.getElementById("error-message").style.color = "red";
 
 
       });
 
 
-
+    inputCity.value = "";
 
   });
 
@@ -191,6 +194,9 @@ window.onload = function () {
   })
 
   closeCityOptions.addEventListener('click', () => {
+
+    document.getElementById("error-message").textContent = "Enter a name and click on the slot you would like to change:";
+    document.getElementById("error-message").style.color = "black";
     cityOptions.style.display = "none";
     showCityOptions.style.display = "block";
 
@@ -265,8 +271,8 @@ window.onload = function () {
     .catch(error => {
       console.error('Error retrieving data from API:', error);
 
-      document.getElementById("temperature").textContent = "City data cannot be found or does not exist. Check spelling or name for errors.";
-      firstLocWeather = "dover";
+      document.getElementById("error-message").textContent = "City data cannot be found or does not exist.";
+      document.getElementById("error-message").style.color = "red";
       fetchFirstDetails();
     });
 }

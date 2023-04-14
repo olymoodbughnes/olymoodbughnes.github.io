@@ -146,13 +146,17 @@ export function DisplayTemp(min, max, temp) {
 
 
     const currentTemp = document.getElementById("temperature");
+    const maxTemp = document.getElementById("temperature-maximum");
+    const minTemp = document.getElementById("temperature-minimum");
     const centigradeMin = min - 273.15;
     const centigradeMax = max - 273.15;
     const centigradeTemp = temp - 273.15;
+
+
     currentTemp.textContent = "";
-    currentTemp.textContent = "Current Temperature :" + parseInt(centigradeTemp) + "\r\n";
-    currentTemp.textContent += "Maximum : " + parseInt(centigradeMax) + "\r\n";
-    currentTemp.textContent += "Minimum : " + parseInt(centigradeMin);
+    currentTemp.textContent = parseInt(centigradeTemp) + "°C";
+    maxTemp.textContent = "Maximum: " + parseInt(centigradeMax);
+    minTemp.textContent = "Minimum: " + parseInt(centigradeMin);
 
 }
 
