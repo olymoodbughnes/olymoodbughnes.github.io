@@ -448,15 +448,64 @@ display: none;
     }
 @media (max-width: 1000px) {
     .nav-container{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-column-gap: 12rem;
-        grid-row: 1rem;
+        grid-template-columns:none;
+        grid-template-rows: repeat(3, 1fr);
+        
         background-color: #123981;
         width: 100%;
              }
+    .dashboard-component-country-select{
+                display: none;
+                            
+            }
+    .link{
 
-      
+                grid-column: 3fr;
+            }
+            
+
+    .main-dashboard{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1rem;
+                }
+
+    .show-options-button{
+
+        grid-column: 1;
+    }
+
+    .dashboard-component-country-select{
+        grid-column: 1;
+        
+    
+    }
+
+    .main-dashboard > *:nth-child(1){
+        
+        grid-column: 1 / span 2;
+    }
+    
+    .dashboard-component.dashboard-component.left-info{
+
+        grid-row-start: 2;
+
+    }
+    .dashboard-component{
+        
+        height: 30rem;
+        margin-right: 5rem;
+        margin-left: 5rem;
+        margin-top: 5rem;
+
+        }
+
+    .arrow-right img{
+        height: 20rem;
+        margin-top: 10rem;
+        margin-right: 2rem;
+
+        }
 
     
 }                
