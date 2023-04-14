@@ -448,9 +448,10 @@ display: none;
     }
 @media (max-width: 1000px) {
     .nav-container{
+        text-align: center;
         grid-template-columns:none;
         grid-template-rows: repeat(3, 1fr);
-        
+       
         background-color: #123981;
         width: 100%;
              }
@@ -461,6 +462,7 @@ display: none;
     .link{
 
                 grid-column: 3fr;
+                background-color: #123981;
             }
             
 
@@ -473,6 +475,9 @@ display: none;
     .show-options-button{
 
         grid-column: 1;
+        width: auto;
+        grid-column-end: 3;
+        
     }
 
     .dashboard-component-country-select{
@@ -489,13 +494,17 @@ display: none;
     .dashboard-component.dashboard-component.left-info{
 
         grid-row-start: 2;
+        height: 20rem;
+       width: auto; 
+        grid-column-end: 3;
 
     }
     .dashboard-component{
         
         height: 30rem;
-        margin-right: 5rem;
-        margin-left: 5rem;
+        width: 30rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
         margin-top: 5rem;
 
         }
@@ -503,7 +512,8 @@ display: none;
     .arrow-right img{
         height: 20rem;
         margin-top: 10rem;
-        margin-right: 2rem;
+        margin-right: 4rem;
+        margin-left: 1rem;
 
         }
 
