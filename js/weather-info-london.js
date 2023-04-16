@@ -61,10 +61,25 @@ window.onload = function () {
   const showCityOptions = document.getElementById("show-options-city");
   const cityOptions = document.getElementById("city-select");
   const closeCityOptions = document.getElementById("close-city-options");
+  const navBar = document.getElementById("nav-container");
+  const showNavBar = document.getElementById("nav-container-sm-screens");
 
   changeCityOneButton.textContent = firstLocWeather.toUpperCase();
   changeCityTwoButton.textContent = secondLocWeather.toUpperCase();
   changeCityThreeButton.textContent = thirdLocWeather.toUpperCase();
+
+
+  showNavBar.addEventListener('click', () => {
+
+    if (navBar.style.display == "grid")
+      navBar.style.display = "none";
+    else {
+      navBar.style.display = "grid";
+
+    }
+
+  })
+
 
   changeCityOneButton.addEventListener('click', () => {
     const city = inputCity.value;
