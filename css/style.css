@@ -527,6 +527,7 @@ display: none;
         grid-column-end: 3;
         margin-left: 2rem;
         margin-right: 2rem;
+        padding-bottom: 6rem;
     
     }
 
@@ -541,6 +542,7 @@ display: none;
         height: 20rem;
        width: auto; 
         grid-column-end: 3;
+        padding-bottom: 6rem;
 
     }
     .dashboard-component{
