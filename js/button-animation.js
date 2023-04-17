@@ -19,7 +19,7 @@ export function changeIcon() {
         if (!(cityOptions.style.display == "none")) {
 
             cityOptions.style.display = "none";
-            showCityOptions.style.display = "block";
+            showCityOptions.style.display = "grid";
 
         }
 

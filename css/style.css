@@ -6,6 +6,11 @@ color: red;
 
 }
 
+html{
+
+    height: 100%;
+}
+
 .nav-container{
 
 
@@ -59,6 +64,12 @@ grid-column-gap: 1rem;
 .dashboard-component-country-select{
 
 height: 10rem;
+display: none;
+    grid-column: 2;
+    
+   
+                    
+    
 
 }
 .dashboard-component.left-info{
@@ -135,11 +146,7 @@ height: 10rem;
 
 
 
-.dashboard-component-country-select{
-    display: none;
-    grid-column: 2;
-    
-}
+
 
 .dashboard-component-country-select input {
 
@@ -296,15 +303,28 @@ grid-row: span 3;
 
 
 body{
+    height: 100%;
 color: black;
 margin: 0;
-background-image: url(../img/daytime.jpg);
-background-size:cover;
+
+background: rgb(2,0,36);
 
 font-family: 'Open Sans', sans-serif;
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
 
+.gradient-night{
 
+    
+    background-image: linear-gradient(0deg, rgba(47,39,16,1) 0%, rgba(15,10,33,1) 18%, rgba(11,21,74,1) 100%);
+}
+
+.gradient-day{
+
+   background-image:  linear-gradient(0deg, rgba(148,97,65,1) 0%, rgba(177,136,31,1) 14%, rgba(65,146,195,1) 100%);
+
+}
 
 /*PARENT ARROW CONTAINER*/
 .arrow-right{
@@ -480,10 +500,7 @@ display: none;
         
              }
              
-    .dashboard-component-country-select{
-                display: none;
-                            
-            }
+  
     .link{
 
                 grid-column: 3fr;
@@ -507,7 +524,9 @@ display: none;
 
     .dashboard-component-country-select{
         grid-column: 1;
-        
+        grid-column-end: 3;
+        margin-left: 2rem;
+        margin-right: 2rem;
     
     }
 
@@ -542,6 +561,11 @@ display: none;
 
         }
 
-    
+        .close-options{
+
+            margin-bottom: 10%;
+
+        }
+
 }                
     

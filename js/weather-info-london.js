@@ -204,7 +204,7 @@ window.onload = function () {
   showCityOptions.addEventListener('click', () => {
 
     showCityOptions.style.display = "none";
-    cityOptions.style.display = "block";
+    cityOptions.style.display = "grid";
 
   })
 

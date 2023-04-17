@@ -206,16 +206,22 @@ export function DisplayLocalTime(timezone, sunrise, sunset) {
 
 
 
-
+    const b = document.querySelector("body");
+    const para = document.querySelector("p");
     if (!(isDayTime(localTime, (sunrise + (timezoneOffset * 60 * 1000)), sunset + (timezoneOffset * 60 * 1000)))) {
 
-        document.body.style.backgroundImage = "url('../img/nighttime.jpg')";
+        //document.body.style.backgroundImage = "url('../img/nighttime.jpg')";
+        b.classList.remove("gradient-day");
+        b.classList.add("gradient-night");
         document.body.style.color = "white";
-
+        para.style.color = "white";
 
     } else {
-        document.body.style.backgroundImage = "url('../img/daytime.jpg')";
+        //sdocument.body.style.backgroundImage = "url('../img/daytime.jpg')";
+        b.classList.remove("gradient-night");
+        b.classList.add("gradient-day");
         document.body.style.color = "black";
+        para.style.color = "black";
     }
 
 
