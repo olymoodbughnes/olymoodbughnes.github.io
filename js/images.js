@@ -1,5 +1,5 @@
 
-/*Creates default image*/
+//image elements for each location
 let img = document.createElement("img");
 img.src = "";
 
@@ -116,52 +116,37 @@ export function SetImage(newImage, elementName) {
             break;
 
     }
-
+    //find the name of the current location slot [first, second, third]
     let currentGeneralConditions = document.getElementById(elementName);
-
+    //if location slot is the first one, display the image 
     if (elementName == "current-general-conditions-first") {
-
+        //set the source for the respective image to the relevant image element
         img.src = imgToBeDisplayed;
         img.style.width = "10rem";
-
+        //set image id to relevant identifier
         img.setAttribute('id', 'first-image');
-
+        //append image
         currentGeneralConditions.appendChild(img);
-
 
     } else if (elementName == "current-general-conditions-second") {
 
-
         img2.src = imgToBeDisplayed;
         img2.style.width = "10rem";
-
         img2.setAttribute('id', 'second-image');
-
         currentGeneralConditions.appendChild(img2);
 
     } else if (elementName == "current-general-conditions-third") {
 
-
         img3.src = imgToBeDisplayed;
         img3.style.width = "10rem";
-
         img3.setAttribute('id', 'third-image');
-
         currentGeneralConditions.appendChild(img3);
 
     }
-
-
-
-
-
-
 }
 
-
+//set initial classes to the rest of the weather icon images
 export function oneTimeDisplayinator() {
-
     img2.setAttribute('class', 'leave-dash');
     img3.setAttribute('class', 'leave-dash');
-
 }

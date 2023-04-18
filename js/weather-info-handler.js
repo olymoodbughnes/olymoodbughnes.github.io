@@ -122,15 +122,6 @@ export function DisplayIcon(weatherCode, weatherIcon, elementName) {
 
     }
 
-
-
-
-
-
-
-
-
-
 }
 
 export function DisplayLocationName(locationName) {

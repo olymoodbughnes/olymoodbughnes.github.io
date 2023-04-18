@@ -1,16 +1,14 @@
 
-import { SetImage, oneTimeDisplayinator } from "./images.js";
+import { oneTimeDisplayinator } from "./images.js";
 import { DisplayIcon, DisplayLocationName, DisplayTemp, DisplayWeatherDesc, DisplayRain, DisplayLocalTime, DisplayFeel } from "./weather-info-handler.js";
-import { fetchSecond, fetchSecondDetails, setLocationTwo } from "./weather-info-second.js";
-import { changeIcon, updateIfHere } from "./button-animation.js";
-import { getCity } from "./button-actions.js";
-import { fetchThirdDetails, setLocationThree } from "./weather-info-third.js";
+import { fetchSecond, setLocationTwo } from "./weather-info-second.js";
+import { updateIfHere } from "./button-animation.js";
+import { setLocationThree } from "./weather-info-third.js";
 
-let firstLocWeather = 'Dover';
+let firstLocWeather = 'London';
 let secondLocWeather = 'Dover';
-let thirdLocWeather = 'Las%20Vegas';
-let latlong = "";
-let chosenCity;
+let thirdLocWeather = 'Chicago';
+
 window.onload = function () {
 
 
