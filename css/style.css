@@ -18,7 +18,7 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 grid-column-gap: 1rem;
 grid-row: 1rem;
-background-color: #123981;
+background-color: #0d0f39;
 
 width: auto;
 
@@ -47,8 +47,8 @@ grid-column-gap: 1rem;
     text-align: start;
     margin: 5%;
     padding: 5%;
-    border-radius: 5px;
-    background-color: #ffffff1f;
+    border-radius: 10px;
+    background-color: #c0c0c01f;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Safari */
     -moz-backdrop-filter: blur(10px); /* Firefox */
@@ -56,7 +56,7 @@ grid-column-gap: 1rem;
     -o-backdrop-filter: blur(10px); /* Opera */
      position: relative;
     height: 26rem;
-    border: 1px solid white; /* solid borders */
+    /*border: 1px solid white; /* solid borders */
     overflow-wrap: break-word;
     
 }
@@ -82,14 +82,14 @@ display: none;
 
 .location-details{
 
-    background-color: #ffffff1f;
-    border-radius: 5px;
+    background-color: #8b8b8b1f;
+    border-radius: 10px;
     font-weight: bold;
     padding-top: 2%;
     padding-bottom: 2%;
     margin-top: 3%;
     padding-left: 2%;
-    border: 1px solid white; /* solid borders */
+   /* border: 1px solid white; /* solid borders */
    
 }
 
@@ -102,7 +102,7 @@ display: none;
 .weather-details{
    
     text-align: center;
-    background-color: #afafaf56;
+    
     border-radius: 5px;
     font-weight: bold;
     font-size: 2rem;
@@ -110,20 +110,20 @@ display: none;
     padding-bottom: 2%;
     margin-bottom: 2%;
     padding-left: 2%;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
 
 }
 
 .weather-icon{
 
-    background-color: #ffffff1f;
+    background-color: #8b8b8b1f;
     border-radius: 5px;
     font-weight: bold;
     padding-top: 1%;
     padding-bottom: 17%;
     margin-bottom: 5%;
     padding-left: 2%;
-    border: 1px solid white; /* solid borders */
+    /*border: 1px solid white; /* solid borders */
     height: 30%;
 
 }
@@ -133,9 +133,9 @@ display: none;
     text-align: center;
     font-weight: bold;
     font-size: 2rem;
-    background-color: #afafaf56;
+    backdrop-filter: none;
     border-radius: 5px;
-    border: 1px solid rgb(255, 255, 255);
+   /* border: 1px solid rgb(255, 255, 255);*/
    margin-bottom: 4%;
     padding-bottom: 2%;
     padding-top: 2%;
@@ -253,6 +253,7 @@ background-color: #b62323de;
 
 .temperature-section{
 
+    
     padding-top: 1%;
     font-weight: bold;
 
@@ -263,8 +264,8 @@ background-color: #b62323de;
 #temperature-maximum, #temperature-minimum{
     
 
-    background-color: #ffffff1f;
-    border: 1px solid white; /* solid borders */
+    background-color: #8b8b8b1f;
+    /*border: 1px solid white;  solid borders */
     border-radius: 5px;
     padding-left: 2%;
     padding-top: 2%;
@@ -292,7 +293,9 @@ grid-row: span 3;
 
     /*Make links look like normal text*/
     font-family: Arial, sans-serif;
-    border: 1px solid white; /* solid borders */
+    /* border: 1px solid white; solid borders */
+    border-radius: 10px;
+    background-color: #212442;
     padding: 3% 8%;
     color: white; /* black text color */   
     text-decoration: none; /* remove any underlining */
@@ -346,7 +349,7 @@ background-attachment: fixed;
     transition: background-color 0.12s ease;
     border-radius: 5px;
     backdrop-filter: blur(10px);
-    border: 1px solid white; /* solid borders */
+    /*border: 1px solid white; /* solid borders */
     }
     
 .arrow-right img:hover, .show-options-button:hover, .close-options:hover{
