@@ -1,0 +1,41 @@
+.AE-Landing-Page{
+
+background-color: #1E2C5D;
+height: 100%;
+margin: 0;
+display: grid;
+grid-template-columns: 1fr;
+
+}
+
+.navbar-whitebg-bluetext-horizontal{
+
+background-color: white;
+color: #1E2C5D;
+width: 100%;
+display: grid;
+grid-template-columns: 30% 70%;
+
+}
+.navbar-whitebg-bluetext-horizontal a{
+/*Aethos 'AE' logo*/
+justify-self: center;
+align-self: center;
+
+}
+.navitems-bluetext-horizontal{
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10%;
+   align-self: center;
+   justify-content: center;
+
+}
+
+.navitems-bluetext-horizontal a{
+font-size: 20px;
+
+
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+text-decoration: none;
+
+}
