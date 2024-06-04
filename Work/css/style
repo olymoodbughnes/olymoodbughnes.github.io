@@ -5,7 +5,7 @@ height: 100%;
 margin: 0;
 display: grid;
 grid-template-columns: 1fr;
-
+color:#1E2C5D; 
 }
 
 .navbar-whitebg-bluetext-horizontal{
@@ -43,6 +43,7 @@ text-decoration: none;
 .narrow-seethrough-blurry-thinedges{
 
 display: grid;
+gap: 5vw;
 justify-self: center;
 width: 60vw;
 height: 20vw;
@@ -53,7 +54,11 @@ border-color: rgb(255, 255, 255);
 
 background-color: rgba(34, 34, 180, 0.422);
 
-padding: 5vw;
+padding-left: 5vw;
+padding-right: 5vw;
+
+padding-top: 7vw;
+padding-bottom: 7vw;
 }
 
 .front-cover-small-white-transparent{
@@ -62,10 +67,26 @@ background-color: rgba(255, 255, 255, 0.553);
 justify-self: start;
 height: 14vw;
 width: 30vw;
+
+
+}
+
+.front-cover-column-text{
+
+    display: grid;
+    grid-template-rows: repeat(4, 2vw);
 }
 
 .square-ibutton-icon-left{
 justify-self: end;
-width: 10vw;
+text-align:center;
+
+width: 20vw;
+height: 2vw;
+background-color: rgba(255, 255, 255, 0.553);
+padding: 2vw;
+padding-bottom: 3vw;
+border: none;
+
 
 }
