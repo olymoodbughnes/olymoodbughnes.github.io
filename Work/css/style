@@ -39,3 +39,33 @@ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans
 text-decoration: none;
 
 }
+
+.narrow-seethrough-blurry-thinedges{
+
+display: grid;
+justify-self: center;
+width: 60vw;
+height: 20vw;
+border-left: solid 1px;
+border-right: solid 1px;
+
+border-color: rgb(255, 255, 255);
+
+background-color: rgba(34, 34, 180, 0.422);
+
+padding: 5vw;
+}
+
+.front-cover-small-white-transparent{
+
+background-color: rgba(255, 255, 255, 0.553);
+justify-self: start;
+height: 14vw;
+width: 30vw;
+}
+
+.square-ibutton-icon-left{
+justify-self: end;
+width: 10vw;
+
+}
