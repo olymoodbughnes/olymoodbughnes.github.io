@@ -1,3 +1,10 @@
+body{
+    
+    font-family: 'Varela Round';
+       
+    
+}
+
 .AE-Landing-Page{
 
 background-color: #1E2C5D;
@@ -6,6 +13,7 @@ margin: 0;
 display: grid;
 grid-template-columns: 1fr;
 color:#1E2C5D; 
+
 }
 
 .navbar-whitebg-bluetext-horizontal{
@@ -17,17 +25,29 @@ display: grid;
 grid-template-columns: 30% 70%;
 
 }
+
+.AE-Logo{
+
+padding-left: 20%;
+
+}
+
+
 .navbar-whitebg-bluetext-horizontal a{
 /*Aethos 'AE' logo*/
 justify-self: center;
+
 align-self: center;
+
 
 }
 .navitems-bluetext-horizontal{
+    margin-left: 10%;
     display: grid;
-    grid-template-columns: 10% 10% 10% 10%;
+    grid-template-columns: 20% 20% 20% 20%;
    align-self: center;
    justify-content: center;
+   
 
 }
 
@@ -35,7 +55,7 @@ align-self: center;
 font-size: 20px;
 
 
-font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-family: 'Varela Round', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 text-decoration: none;
 
 }
@@ -80,6 +100,7 @@ width: 30vw;
 .square-ibutton-icon-left{
 justify-self: end;
 text-align:center;
+font-family: 'Varela Round';
 
 width: 20vw;
 height: 2vw;
