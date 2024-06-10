@@ -11,7 +11,7 @@ background-color: #1E2C5D;
 height: 100%;
 margin: 0;
 display: grid;
-grid-template-columns: 1fr;
+grid-template-rows: 10fr 10fr 10fr;
 color:#1E2C5D; 
 
 }
@@ -95,19 +95,59 @@ width: 30vw;
 
     display: grid;
     grid-template-rows: repeat(4, 2vw);
+    padding-left: 2vw;
 }
 
 .square-ibutton-icon-left{
 justify-self: end;
-text-align:center;
+align-items:center;
 font-family: 'Varela Round';
-
+font-size: large;
+font-weight: bolder;
+display: grid;
+grid-template-columns: 25% 75%;
 width: 20vw;
-height: 2vw;
+height: 5vw;
 background-color: rgba(255, 255, 255, 0.553);
-padding: 2vw;
-padding-bottom: 3vw;
+color:#1E2C5D; 
+
+
+
 border: none;
 
+
+}
+
+
+.plain-side2side-white-rectangle{
+
+background-color: white;
+
+height: 100%;
+margin: 0;
+display: grid;
+justify-items: center;
+align-items: center;
+grid-template-columns: 67% 33%;
+color:#1E2C5D; 
+
+}
+
+.plain-grey-image-frame{
+
+
+    background-color: rgba(128, 128, 128, 0.45);
+    padding: 1vw;
+}
+
+.blue-sqbutton-variant{
+
+    background-color: rgba(42, 24, 119, 0.553);
+    color: white;
+}
+
+.right-separation-line{
+
+border-right: solid 1px black;
 
 }
