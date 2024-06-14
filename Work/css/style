@@ -123,6 +123,7 @@ body {
 }
 
 .square-ibutton-icon-left {
+    
     justify-self: end;
     align-items: center;
     
@@ -151,6 +152,23 @@ body {
                 8px /*blur*/ 
                 0px /*size of shadow*/ 
                 rgba(0, 0, 0, 0.568);
+
+}
+
+.dual-box-shadow-small-up-down{
+
+    box-shadow:  0px /*X axis*/ 
+                -1px /*Y axis*/
+                 8px /*blur*/ 
+                 0 /*size of shadow*/ 
+                 rgba(0, 0, 0, 0.568),
+
+                 0px /*X axis*/ 
+                 1px /*Y axis*/
+                 20px /*blur*/ 
+                 0 /*size of shadow*/ 
+                 rgba(0, 0, 0, 0.568);
+
 
 }
 
@@ -202,22 +220,28 @@ body {
     align-items: center;
     grid-template-columns: 67% 1% 32%;
     color: #1f2c5c;
-    box-shadow:  0px /*X axis*/ 
-                -1px /*Y axis*/
-                 8px /*blur*/ 
-                 0 /*size of shadow*/ 
-                 rgba(0, 0, 0, 0.568),
-                 0px /*X axis*/ 
-                1px /*Y axis*/
-                 20px /*blur*/ 
-                 0 /*size of shadow*/ 
-                 rgba(0, 0, 0, 0.568)
+   
 
-                 
-                 
-                 
-                 
-                 ;
+}
+
+.seethrough-side2side-blue-rectangle{
+
+    background-color: #1f2c5ce0;
+    padding-right: 3vw;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 20% 1% 79%;
+    color: white;
+
+
+}
+
+white-body-text{
+
+color: white;
 
 }
 
@@ -228,11 +252,32 @@ body {
     height: 100%;
 }
 
-.start-at-top {
 
+.infotext-rightside-style {
+
+    padding-right: 5vw;
+    padding-left: 5vw;
+    height: 100%;
+}
+
+
+.start-at-top {
+    
     align-self: self-start;
+    
+}
+
+.start-at-end{
+margin-left: 60%;
 
 }
+
+.push-margin-top{
+
+margin-top:8%;
+
+}
+
 
 .plain-grey-image-frame {
 
@@ -264,20 +309,35 @@ body {
 .vertical-separation-line {
     align-self:center;
     height: 70%;
+    border-right: solid 2px #d4d4d4;
+    margin-bottom: 10%;
+
+}
+
+
+.vertical-separation-line-fadedblue {
+    align-self:center;
+    height: 70%;
     border-right: solid 2px #1f2c5c;
     margin-bottom: 10%;
 
 }
 
+
 .horizontal-line-light {
 
-    border: 1.6px solid rgb(231, 231, 231);
+    border: 1.6px solid rgba(231, 231, 231, 0.623);
 
 
 
 }
 
 .imageshape-rectangle {
+    height: 50%;
+    width: 80%;
+
+}
+.imageshape-square {
     height: 50%;
     width: 80%;
 
