@@ -142,7 +142,7 @@ body {
 
 /*Animation Settings*/
 
-transition: 0.2s;
+transition: all 0.8s;
 
 
 }
@@ -155,7 +155,7 @@ transition: 0.2s;
                 0px /*size of shadow*/ 
                 rgba(0, 0, 0, 0.568);
 
-}
+}   
 
 .dual-box-shadow-small-up-down{
 
@@ -174,40 +174,33 @@ transition: 0.2s;
 
 }
 
-.information-i{
+.inset-box-shadow-small{
 
-   
-    
-  
-    position: relative;
 
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    
-/*  */
+    box-shadow:  3px /*X axis*/ 
+                3px /*Y axis*/
+                 10px /*blur*/ 
+                 0.3px /*size of shadow*/ 
+                 rgba(0, 0, 0, 0.568)
+                 inset;
 }
+.information-i {
 
-.information-i-letter{
-
-    position: absolute;
-    top: -18%;
-    left: 46%;
+    font-size: larger;
+    font-weight: 900;
+    background-color: #1E2C5D;
+    width: 100px;
+   padding-right: 30%;
+   padding-left: 30%;
+   padding-top: 12%;
+   padding-bottom: 12%;
     color: white;
-    font-weight: bold;
-    font-size:150%;
-    z-index: 5;
+    border-radius: 100%;
 
+    
 }
 
-.i-circle{
 
-
-
-    position: absolute;
-    margin-top: -31%;
-    left: -29%;
-}
 
 
 
@@ -311,7 +304,7 @@ align-items: center;
 .blue-sqbutton-i{
 
     color: #1f2c5c;
-
+    background-color: white;
 
 }
 .vertical-separation-line {
@@ -359,8 +352,26 @@ align-items: center;
 /*Buttons*/
 
 .square-ibutton-icon-left:hover{
-background-color: black;
+grid-template-columns: 100%;
 
+.information-i{
+
+
+
+padding-right: 7.5%;
+padding-left: 7.5%;
+padding-top: 3%;
+padding-bottom: 3%;
+}
+
+.square-ibutton-message{
+
+display: none;
+
+};
+
+
+/*maybe change the size of each section of the grid*/
 
 
 
