@@ -11,7 +11,11 @@ body {
     height: 100%;
     margin: 0;
     display: grid;
-    grid-template-rows: minmax(auto,  438px) minmax(auto,  438px) minmax(auto,  438px) minmax(auto,  300px);
+    grid-template-rows: minmax(auto,  438px) 
+                        minmax(auto,  438px) 
+                        minmax(auto,  438px) 
+                        minmax(340px,  438px) 
+                        minmax(auto,  438px);
     color: #1E2C5D;
 
 }
@@ -142,8 +146,34 @@ body {
 
 /*Animation Settings*/
 
-transition: all 0.8s;
+transition: grid-template-columns 0.2s, scale 0.2s;
+}
 
+
+.information-i {
+
+
+    
+    font-size: larger;
+    font-weight: 900;
+    background-color: #1E2C5D;
+    width: 100px;
+   padding-right: 20px;
+   padding-left: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+    color: white;
+    border-radius: 100%;
+
+    
+}
+
+
+
+
+.square-ibutton-message{
+
+    transition: 0.8s;
 
 }
 
@@ -184,22 +214,6 @@ transition: all 0.8s;
                  rgba(0, 0, 0, 0.568)
                  inset;
 }
-.information-i {
-
-    font-size: larger;
-    font-weight: 900;
-    background-color: #1E2C5D;
-    width: 100px;
-   padding-right: 30%;
-   padding-left: 30%;
-   padding-top: 12%;
-   padding-bottom: 12%;
-    color: white;
-    border-radius: 100%;
-
-    
-}
-
 
 
 
@@ -218,6 +232,8 @@ transition: all 0.8s;
    
 
 }
+
+
 
 .seethrough-side2side-blue-rectangle{
 
@@ -345,34 +361,51 @@ align-items: center;
 }
 
 
+.white-button-background-highlight{
 
+    background-color: auto;
+        
+    }
 /*CSS Animations*/
 
 
 /*Buttons*/
 
 .square-ibutton-icon-left:hover{
-grid-template-columns: 100%;
 
-.information-i{
+scale: 1.1;
 
-
-
-padding-right: 7.5%;
-padding-left: 7.5%;
-padding-top: 3%;
-padding-bottom: 3%;
-}
+grid-template-columns: 99% 1%;
 
 .square-ibutton-message{
 
-display: none;
+    display: none;
+    opacity: 0.2;
+
 
 };
 
 
-/*maybe change the size of each section of the grid*/
 
 
+}
+
+.blue-button-background-highlight:hover{
+    cursor:pointer;
+    background-color: #1E2C5D;
+    
+}
+
+.white-button-background-highlight:hover{
+    cursor:pointer;
+   
+background-color: white;
+    
+}
+
+.test{
+
+background-color: black;
+height: 400px;
 
 }

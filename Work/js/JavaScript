@@ -1,0 +1,15 @@
+$(document).ready(function() {
+    var docWidth = $(document).width();
+    var docHeight = $(document).height();
+  
+    $(document).mousemove(function(event) {
+      var percentHeight = (event.pageY / docHeight) * 100;
+      var percentWidth = (event.pageX / docWidth) * 100;
+  
+      $("#spotlight_zone").css({
+        background: "-webkit-radial-gradient(" + percentWidth + "% " + percentHeight + "%, circle, rgba(175,225,255,1) 0, rgba(43,116,165,1) 27%, rgba(5,57,91,1) 100%)"
+      });
+  
+     
+    });
+  });
