@@ -1,0 +1,108 @@
+function testPrompt01() {
+
+  let testMessage = alert("JavaScript is working");
+
+
+}
+$(document).ready(function () {
+
+
+  //Variables
+  var $element = $('#spotlight_zone');
+  var elementWidth = $element.width();
+  var elementHeight = $element.height();
+  var offset = $element.offset();
+
+  //square button scripts
+  const squareButtons = document.querySelectorAll('.square-ibutton-icon-left');
+  const sqBtnMessage = document.getElementById('square-ibutton-message01');
+  const sqBtnMessage2 = document.getElementById('square-ibutton-message02');
+  const sqBtnMessage3 = document.getElementById('square-ibutton-message03');
+  
+
+  var anyHidden = false;
+
+  squareButtons.forEach(squareButton => {
+    squareButton.addEventListener('transitionend', (event) => {
+
+      //check which message to work with.
+
+
+
+      if (event.propertyName === 'grid-template-columns' && anyHidden == true) {
+
+
+
+        sqBtnMessage.classList.remove('element-hidden');
+        sqBtnMessage2.classList.remove('element-hidden');
+        sqBtnMessage3.classList.remove('element-hidden');
+
+        anyHidden = false;
+        console.log('Yellow time');
+
+      } else
+
+        if (event.propertyName === 'grid-template-columns' && anyHidden == false) {
+
+
+          if (getComputedStyle(sqBtnMessage).display == "none") {
+            sqBtnMessage.classList.add('element-hidden');
+            console.log('1');
+
+          }
+          if (getComputedStyle(sqBtnMessage2).display == "none") {
+            sqBtnMessage2.classList.add('element-hidden');
+            console.log('2');
+
+          }
+          if (getComputedStyle(sqBtnMessage3).display == "none") {
+            sqBtnMessage3.classList.add('element-hidden');
+            console.log('3');
+
+          }
+
+
+
+
+
+          anyHidden = true;
+          console.log('Red time');
+        }
+
+
+
+    });
+
+  });
+
+
+
+
+
+//code for spotlight effect
+
+  window.addEventListener('resize', function () {
+    
+    elementWidth = $element.width();
+    elementHeight = $element.height();
+    offset = $element.offset();
+    console.log('Window has been resized');
+ });
+  $element.mousemove(function (event) {
+    var relativeX = event.pageX - offset.left;
+    var relativeY = event.pageY - offset.top;
+    var percentHeight = (relativeY / elementHeight) * 100;
+    var percentWidth = (relativeX / elementWidth) * 100;
+    $element.css({
+      background: "-webkit-radial-gradient(" + percentWidth + "% " + percentHeight + "%, circle, rgba(255,225,255,1) 0, rgba(255,255,255,0.2) 1px, rgba(31, 44, 92, 0.1) 2px)"
+                } );
+                    }             );
+
+
+
+
+//End of Document        
+});
+
+
+

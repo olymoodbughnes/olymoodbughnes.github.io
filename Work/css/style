@@ -23,7 +23,7 @@ body {
 .navbar-whitebg-bluetext-horizontal {
 
     background-color: white;
-    color: #1E2C5D;
+    color: rgb(30, 44, 93);
     width: 100%;
     display: grid;
     grid-template-columns: 30% 70%;
@@ -174,6 +174,7 @@ transition: grid-template-columns 0.2s, scale 0.2s;
 .square-ibutton-message{
 
     transition: 0.8s;
+    
 
 }
 
@@ -238,7 +239,7 @@ transition: grid-template-columns 0.2s, scale 0.2s;
 .seethrough-side2side-blue-rectangle{
 
     background-color: #1f2c5ce0;
-    padding-right: 3vw;
+    
     height: 100%;
     margin: 0;
     display: grid;
@@ -379,8 +380,7 @@ grid-template-columns: 99% 1%;
 
 .square-ibutton-message{
 
-    display: none;
-    opacity: 0.2;
+display: none;
 
 
 };
@@ -388,6 +388,11 @@ grid-template-columns: 99% 1%;
 
 
 
+}
+
+.element-hidden{
+
+    display: none;
 }
 
 .blue-button-background-highlight:hover{
