@@ -140,7 +140,7 @@ body {
     height: 60px;
     background-color: rgba(255, 255, 255, 0.721);
     color: #1f2c5ce0;
-    
+    overflow: hidden;
     padding:0;
     border: none;
 

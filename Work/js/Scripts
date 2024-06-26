@@ -21,52 +21,76 @@ $(document).ready(function () {
   
 
   var anyHidden = false;
+  var Debug_Succesful_Hidden_Transition = true;
 
   squareButtons.forEach(squareButton => {
     squareButton.addEventListener('transitionend', (event) => {
 
       //check which message to work with.
+        if (event.propertyName !== 'grid-template-columns') {
+          return;
+        }
 
-
+        
+      console.log('anyHidden is now: ' + anyHidden);
 
       if (event.propertyName === 'grid-template-columns' && anyHidden == true) {
-
-
+        
+        console.log('current cycle number is: ' + NumOfIt);
+        NumOfIt++;
+        console.log('transition has ended, starting removal process...');
+        console.log('Removing element-hidden class');
+      
 
         sqBtnMessage.classList.remove('element-hidden');
         sqBtnMessage2.classList.remove('element-hidden');
         sqBtnMessage3.classList.remove('element-hidden');
-
+        console.log('setting anyHidden to FALSE');
+      
         anyHidden = false;
-        console.log('Yellow time');
+        console.log('Element now visible');
 
       } else
 
         if (event.propertyName === 'grid-template-columns' && anyHidden == false) {
-
-
+          console.log('current cycle number is: ' + NumOfIt);
+          NumOfIt++;  
+          console.log('transition has ended, starting hiding process...');
+      
           if (getComputedStyle(sqBtnMessage).display == "none") {
+            console.log('button display property is none');
+      
             sqBtnMessage.classList.add('element-hidden');
-            console.log('1');
+            console.log('element-hidden class added');
+            console.log('Setting anyHidden to TRUE');
+      
+            anyHidden = true;
+            console.log('Element is now invisible');
 
           }
           if (getComputedStyle(sqBtnMessage2).display == "none") {
             sqBtnMessage2.classList.add('element-hidden');
             console.log('2');
+            console.log('Setting anyHidden to TRUE');
+      
+            anyHidden = true;
+            console.log('Element is now invisible');
 
           }
           if (getComputedStyle(sqBtnMessage3).display == "none") {
             sqBtnMessage3.classList.add('element-hidden');
             console.log('3');
+            console.log('Setting anyHidden to TRUE');
+      
+            anyHidden = true;
+            console.log('Element is now invisible');
 
           }
 
 
 
 
-
-          anyHidden = true;
-          console.log('Red time');
+        
         }
 
 
