@@ -1,0 +1,578 @@
+body {
+
+ 
+    font-family: 'Tahoma', Arial, sans-serif;
+
+
+}
+
+.heading-title-style{
+
+font-size: 65px;
+font-weight: 500;
+margin-top: 0px;
+margin-bottom: 8px;
+
+}
+
+.heading-content-style{
+
+    font-size:18px;
+}
+
+.AE-Landing-Page {
+
+    background-color: #1f2c5c;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-rows: minmax(90px,  438px) 
+                        minmax(auto,  438px) 
+                        minmax(auto,  438px) 
+                        minmax(340px,  438px) 
+                        minmax(auto,  438px)
+                        minmax(auto,  438px)
+                        ;
+    color: #1E2C5D;
+
+}
+
+.aethos-footer{
+
+margin-top: 10;
+
+}
+
+.navbar-whitebg-bluetext-horizontal {
+
+    background-color: white;
+
+    color: rgb(30, 44, 93);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+
+}
+
+.AE-Logo {
+
+    padding-left: 20%;
+
+}
+
+
+.navbar-whitebg-bluetext-horizontal a {
+    /*Aethos 'AE' logo*/
+    justify-self: center;
+
+    align-self: center;
+
+
+}
+
+.navitems-bluetext-horizontal {
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    align-self: center;
+    justify-content: center;
+
+
+}
+
+.navitems-bluetext-horizontal a {
+    font-size: 20px;
+    
+
+}
+
+.no-link-style a,
+.no-link-style article section a
+{
+
+    text-decoration: none;
+    color: #1E2C5D;
+    font-weight:900;
+}
+
+
+.narrow-seethrough-blurry-thinedges {
+    /*Element Dimensions*/
+    height: 100%;
+    width: 60%;
+    /*Grid Structure*/
+    display: grid;
+    justify-self: center;
+    align-items: center;
+    /*Border*/
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-color: rgb(255, 255, 255);
+    /*Background*/
+    background-color: #1f2c5cc6;
+    backdrop-filter: blur(3px);
+    /*Padding*/
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+
+}
+
+
+
+.start-banner {
+
+
+    grid-row-start: 2;
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    filter: grayscale(0);
+
+
+
+    z-index: -1;
+
+
+}
+
+
+.front-cover-small-white-transparent {
+
+    background-color: rgba(0, 0, 0, 0);
+    justify-self: start;
+    width: 65%;
+    padding: 1vw;
+    padding-top: 4vw;
+    color: white;
+    
+
+}
+
+.front-cover-column-text {
+    border-top: solid 1.5px white;
+    border-bottom: solid 1.5px white;
+    display: grid;
+    padding-left: 2px;
+}
+
+.generic-button-blue{
+
+border: none;
+border-radius: 20px;
+padding: 0;
+width: 16vw;
+height: 60px;
+align-self: center;
+justify-self: center;
+font-size: large;
+font-weight: 300;
+
+
+transition: scale 0.2s;
+}
+
+.square-ibutton-icon-left {
+    
+    justify-self: end;
+    align-items: center;
+    
+    font-family: 'Varela Round';
+    font-size: large;
+    font-weight: 300;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    width: 250px;
+    height: 60px;
+    max-height: 60px;
+    background-color: rgba(255, 255, 255, 0.721);
+    color: #1f2c5ce0;
+    overflow:visible;
+    padding:0;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    border: none;
+    border-radius: 20px;
+
+/*Animation Settings*/
+
+transition: grid-template-columns 0.2s, scale 0.2s;
+}
+
+
+.information-i {
+
+
+    
+    font-size: larger;
+    font-weight: 900;
+    background-color: #1E2C5D;
+    width: 100px;
+   padding-right: 20px;
+   padding-left: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+    color: white;
+    border-radius: 100%;
+
+    
+}
+
+
+
+
+.square-ibutton-message{
+
+    transition: 0.8s;
+    
+
+}
+
+
+
+.box-shadow-small-down-right-black{
+
+    box-shadow: 3px /*X axis*/ 
+                3px /*Y axis*/
+                8px /*blur*/ 
+                0px /*size of shadow*/ 
+                #0000005f;
+
+}   
+
+.box-shadow-small-down-right-blue{
+
+    box-shadow: 3px /*X axis*/ 
+                3px /*Y axis*/
+                8px /*blur*/ 
+                0px /*size of shadow*/ 
+                #1E2C5D;
+
+}   
+
+
+.box-shadow-small-down-right-white{
+
+    box-shadow: 3px /*X axis*/ 
+                3px /*Y axis*/
+                8px /*blur*/ 
+                0px /*size of shadow*/ 
+                #ffffff;
+
+}   
+
+
+.dual-box-shadow-small-up-down{
+
+    box-shadow:  0px /*X axis*/ 
+                -1px /*Y axis*/
+                 8px /*blur*/ 
+                 0 /*size of shadow*/ 
+                 rgba(0, 0, 0, 0.568),
+
+                 0px /*X axis*/ 
+                 1px /*Y axis*/
+                 20px /*blur*/ 
+                 0 /*size of shadow*/ 
+                 rgba(0, 0, 0, 0.568);
+
+
+}
+
+.inset-box-shadow-small{
+
+
+    box-shadow:  3px /*X axis*/ 
+                3px /*Y axis*/
+                 10px /*blur*/ 
+                 0.3px /*size of shadow*/ 
+                 rgba(0, 0, 0, 0.568)
+                 inset;
+}
+
+
+/*Content Section Styles*/
+
+.plain-side2side-white-rectangle {
+
+    background: white;
+    padding-left: 3vw;
+    height: 100%;
+    margin: 0;
+   
+    color: #1f2c5c;
+ 
+    
+   
+
+}
+
+
+.seethrough-side2side-blue-rectangle{
+
+    background-color: #1f2c5ce0;
+    
+    height: 100%;
+    margin: 0;
+   
+    color: white;
+ 
+
+}
+
+
+.blue-body-text{
+
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/*GRID Content Structure*/
+.left-img-right-text {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 67% 1% 32%;
+}
+
+
+.right-img-left-text {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 25% 1% 67%;
+}
+
+
+.content-to-edges{
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+.content-to-single-column{
+    display: grid;
+
+
+
+}
+
+.push-to-end{
+
+    justify-self: end;
+
+}
+
+
+
+
+.column-spacing-small a{
+
+padding-bottom: 1vw;
+
+}
+
+.white-body-text{
+
+color: white;
+
+}
+
+.infotext-leftside-style {
+
+    padding-right: 5vw;
+    padding-left: 5vw;
+    height: 100%;
+}
+
+
+.infotext-rightside-style {
+
+    padding-right: 5vw;
+    padding-left: 5vw;
+    height: 100%;
+}
+
+.content-away-right{
+
+margin-right: 3vw;
+
+
+}
+
+.start-at-top {
+    
+    align-self: self-start;
+    
+}
+
+.start-at-end{
+margin-left: 60%;
+
+}
+
+
+
+.plain-grey-image-frame {
+
+    background-color: #1f2c5c00;
+    height: 100%;
+    width:100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+
+.plain-blue-image-frame {
+
+    background-color: #ffffff00;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.seethrough-grey-image-frame-grid{
+
+background-color: rgba(128, 128, 128, 0);
+height: 100%;
+width: 100%;
+display: grid;
+
+justify-items: center;
+align-items: center;
+
+}
+
+.blue-sqbutton-variant {
+
+    background-color: #1f2c5cc0;
+    color: white;
+
+}
+
+.blue-sqbutton-i-circle{
+    
+    background-color: #1E2C5D;
+    color: white;
+ 
+}
+
+.blue-sqbutton-i{
+
+    color: #1f2c5c;
+    background-color: white;
+
+}
+.vertical-separation-line {
+    align-self:center;
+    justify-self: start;
+    height: 100%;
+    border-right: solid 2px #fefefe;
+    margin-bottom: 10%;
+
+}
+
+
+.vertical-separation-line-fadedblue {
+    align-self:center;
+    justify-self: end;
+    height: 100%;
+    border-left: solid 2.8px #1f2c5c;
+    
+    
+
+}
+
+
+.horizontal-line-light {
+
+    border: 1.6px solid rgba(222, 222, 222, 0.623);
+
+
+
+}
+
+
+
+
+.imageshape-rectangle {
+    height: 50%;
+    width: 80%;
+    border: solid 2px #1f2c5c;
+    border-radius: 20px;
+    
+
+}
+.imageshape-square {
+    height: 80%;
+    width: 80%;
+    border: solid 2px white;
+    border-radius: 20px;
+}
+
+
+.white-button-background-highlight{
+
+    background-color: auto;
+        
+    }
+/*CSS Animations*/
+
+
+/*Buttons*/
+
+.square-ibutton-icon-left:hover{
+
+scale: 1.1;
+
+grid-template-columns: 99% 1%;
+
+.square-ibutton-message{
+
+display: none;
+
+
+};
+
+
+
+
+
+}
+
+.generic-button-blue:hover{
+
+    scale: 1.1;
+
+}
+
+.element-hidden{
+
+    display: none;
+}
+
+.blue-button-background-highlight:hover{
+    cursor:pointer;
+    background-color: #1E2C5D;
+    
+}
+
+.white-button-background-highlight:hover{
+    cursor:pointer;
+   
+background-color: white;
+    
+}
+
+.test{
+
+background-color: black;
+height: 400px;
+
+}
