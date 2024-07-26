@@ -19,7 +19,8 @@ font-family: 'calibri', Helvetica, sans-serif;
 
 .heading-content-style{
 
-    font-size:18px;
+    font-size:15px;
+    text-shadow: black;
 }
 
 .AE-Landing-Page {
@@ -29,7 +30,7 @@ font-family: 'calibri', Helvetica, sans-serif;
     margin: 0;
     display: grid;
     grid-template-rows: minmax(75px,  438px) 
-                        minmax(auto,  438px) 
+                        minmax(auto,  auto) 
                         minmax(auto,  438px) 
                         minmax(300px,  438px) 
                         minmax(auto,  438px)
@@ -103,11 +104,12 @@ background-color: #1a1c22;
 
 .narrow-seethrough-blurry-thinedges {
     /*Element Dimensions*/
-    height: 100%;
+    height: auto;
     width: 60%;
     /*Grid Structure*/
     display: grid;
     justify-self: center;
+    justify-items: center;
     align-items: center;
     /*Border*/
     border-left: solid 1px;
@@ -115,11 +117,11 @@ background-color: #1a1c22;
 
     border-color: rgb(255, 255, 255);
     /*Background*/
-    background-color: #1f2c5cc6;
-    backdrop-filter: blur(7px);
+    background-color: #1f2c5ce4;
+    backdrop-filter: blur(2px);
     /*Padding*/
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
 
 
 }
@@ -129,10 +131,10 @@ background-color: #1a1c22;
 .start-banner {
 
 
-    grid-row-start: 2;
-    position: absolute;
+    
+    position:absolute;  
     width: 100%;
-    height: 80%;
+    height: 45vw;
     filter: grayscale(0);
 
 
@@ -146,18 +148,82 @@ background-color: #1a1c22;
 .front-cover-small-white-transparent {
 
     background-color: rgba(0, 0, 0, 0);
-    justify-self: start;
-    width: 65%;
-    padding: 1vw;
-    padding-top: 4vw;
+    
+    width: 60%;
+
     color: white;
     
+   
 
 }
 
+/*Front cover frame*/
+
+.tl-frame {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .tl-frame::before,
+  .tl-frame::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(232, 232, 232);
+  }
+  
+  /* Top border */
+  .tl-frame::before {
+    top: 0;
+    left: 0;
+    width: 60px; /* Length of the top border */
+    height: 4px; /* Thickness of the top border */
+    border-top-left-radius: 200px;
+  }
+  
+  /* Left border */
+  .tl-frame::after {
+    top: 0;
+    left: 0;
+    width: 4px; /* Thickness of the left border */
+    height: 60px; /* Length of the left border */
+    border-top-left-radius: 200px;
+  }
+  
+  
+  .br-frame {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .br-frame::before,
+  .br-frame::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  /* Top border */
+  .br-frame::before {
+    bottom: 0;
+    right: 0;
+    width: 60px; /* Length of the top border */
+    height: 4px; /* Thickness of the top border */
+    border-bottom-right-radius: 200px;
+  }
+  
+  /* Left border */
+  .br-frame::after {
+    bottom: 0;
+    right: 0;
+    width: 4px; /* Thickness of the left border */
+    height: 60px; /* Length of the left border */
+    border-bottom-right-radius: 200px;
+  }
+  
+  
+
+
 .front-cover-column-text {
-    border-top: solid 1.5px white;
-    border-bottom: solid 1.5px white;
     display: grid;
     padding-left: 2px;
 }
@@ -180,7 +246,6 @@ transition: scale 0.2s;
 
 .square-ibutton-icon-left {
     
-    justify-self: end;
     align-items: center;
     
     font-family: 'Varela Round';
@@ -203,6 +268,17 @@ transition: scale 0.2s;
 /*Animation Settings*/
 
 transition: grid-template-columns 0.2s, scale 0.2s;
+}
+
+.js-left{
+
+justify-self: start;
+
+}
+.js-right{
+
+    justify-self: end;
+
 }
 
 
@@ -696,3 +772,26 @@ background-color: black;
 height: 400px;
 
 }
+
+
+
+/*======================RESPONSIVENESS============================================*/
+
+@media (max-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+
+}
+@media (max-width:480px)  { /* smartphones, Android phones, landscape iPhone */ 
+
+.plain-side2side-white-rectangle{
+    display: flex;
+    flex-direction:column  ;
+    color: red;
+        
+    }
+
+    
+}
+@media (max-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (max-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (max-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (max-width:1281px) { /* hi-res laptops and desktops */ }
