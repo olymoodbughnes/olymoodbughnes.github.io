@@ -168,21 +168,15 @@ body {
 }
 
 .js-left {
-
     justify-self: start;
-
 }
 
 .js-right {
-
     justify-self: end;
-
 }
 
 
 .information-i {
-
-
     /*Font*/
     font-size: larger;
     font-weight: 900;
@@ -194,18 +188,15 @@ body {
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    /*Colour*/
     color: white;
     background-color: #1E2C5D;
-
 }
 .square-ibutton-message {
     transition: 0.8s;
 }
 
-
-
 .box-shadow-small-down-right-black {
-
     box-shadow: 3px
         /*X axis*/
         3px
@@ -215,7 +206,6 @@ body {
         0px
         /*size of shadow*/
         #0000005f;
-
 }
 
 .box-shadow-small-down-right-blue {
@@ -234,7 +224,6 @@ body {
 
 
 .box-shadow-small-down-right-white {
-
     box-shadow: 3px
         /*X axis*/
         3px
@@ -244,12 +233,10 @@ body {
         0px
         /*size of shadow*/
         #ffffff;
-
 }
 
 
 .dual-box-shadow-small-up {
-
     box-shadow: 0px
         /*X axis*/
         -1px
@@ -295,53 +282,37 @@ body {
 
 .plain-side2side-white-rectangle {
 
-    background: white;
     padding-left: 3vw;
     height: 100%;
     margin: 0;
-
     color: #1f2c5c;
-
-
-
+    background: white;
 
 }
 
 .top-border-blue {
-
     border-top: solid #1f2c5c 2px;
-
-
 }
 
 .top-border-grey {
-
     border-top: solid #1f2c5c 8px;
-
-
 }
 
 
 .seethrough-side2side-blue-rectangle {
-
-    background-color: #1f2c5c;
-
     height: 100%;
     margin: 0;
-
+    background-color: #1f2c5c;
     color: white;
-
-
 }
 
 
 .blue-body-text {
-
     font-size: 17px;
     font-weight: 500;
 }
 
-/*GRID Content Structure*/
+/*============Template Presentation Structures=============*/
 .left-img-right-text {
     display: grid;
     justify-items: center;
@@ -349,37 +320,24 @@ body {
     grid-template-columns: 67% 1% 32%;
 }
 
-
 .right-img-left-text {
     display: grid;
     justify-items: center;
     align-items: center;
     grid-template-columns: 25% 1% 67%;
 }
-
-
 .content-to-edges {
-
     display: grid;
     grid-template-columns: 50% 50%;
-
 }
 
 .content-to-single-column {
     display: grid;
-
-
-
 }
 
 .push-to-end {
-
     justify-self: end;
-
 }
-
-
-
 
 .column-spacing-small a {
 
@@ -387,12 +345,7 @@ body {
 
 }
 
-
-
-
-
 .white-body-text {
-
     color: white;
 
 }
