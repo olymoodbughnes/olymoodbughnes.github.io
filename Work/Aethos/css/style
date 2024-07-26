@@ -676,16 +676,25 @@ body {
 
     .navbar-whitebg-bluetext-horizontal {
 
-        display: none;
+        
     }
 
     .narrow-seethrough-blurry-thinedges {
 
         width: auto;
         padding-left: 10vw;
-
         border: none;
         justify-items: start;
+        box-shadow: 3px
+        /*X axis*/
+        3px
+        /*Y axis*/
+        8px
+        /*blur*/
+        2px
+        /*size of shadow*/
+        #0000005f;
+        z-index: 2;
 
     }
 
@@ -709,7 +718,16 @@ body {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        color: red;
+        box-shadow: 3px
+        /*X axis*/
+        3px
+        /*Y axis*/
+        8px
+        /*blur*/
+        2px
+        /*size of shadow*/
+        #0000005f;
+        z-index: 1;
 
     }
 
@@ -717,8 +735,7 @@ body {
     .seethrough-side2side-blue-rectangle {
         display: flex;
         flex-direction: column;
-        color: red;
-
+    
 
     }
 
@@ -751,7 +768,7 @@ body {
 
     .ftr-clm-title-pos {
 
-        padding-bottom: 3vw;
+        padding-bottom: 30px;
         width: fit-content;
         margin-bottom: 3vw;
 
