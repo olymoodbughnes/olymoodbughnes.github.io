@@ -1,0 +1,11 @@
+body{
+    
+    background-color: antiquewhite;
+
+}
+
+.ybg-light{
+width: 100%;
+background-color: #37b7c3;
+
+}

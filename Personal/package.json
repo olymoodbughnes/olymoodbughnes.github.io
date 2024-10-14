@@ -7,5 +7,7 @@
   "scripts": {
     "start": "node js/weather-info.js"
   },
-  "dependencies": {}
+  "dependencies": {
+    "my-project": "file:"
+  }
 }

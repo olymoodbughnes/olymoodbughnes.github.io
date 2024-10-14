@@ -1,0 +1,12 @@
+nobg-light = no original background "light version", black letters.
+ybg-light = my orignal background "light version", black letters, all elements with this share the same background colour throughout the website, they maintain the same theme.
+ybg-dark = same as above but dark, light letters.
+ynavbar = my navbar style.
+navvertical = navbar style when vertical, e.g. mobile site.
+navhorizontal = navbar style when horizontal, e.g pc site.
+ytitle-dark = style for the text in a title with a light background colour, hence the dark letters.
+ytxt-body-dark = my style for text which is part of a main body of text
+yform = a text input form with my style
+ybutton-light = button style for my site for dark backgrounds
+ybutton-dark = same as above but light backgrounds
+ynav-expand-collapse-mobile = navbar symbol style for the button that brings up the navbar or collapses it on mobile or smalelrs screens
