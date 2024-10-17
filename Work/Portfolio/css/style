@@ -1,11 +1,109 @@
 body{
     
-    background-color: antiquewhite;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+.ybg-light, .ynavbar{
+
+background-color: #37b7c3;
 
 }
 
-.ybg-light{
-width: 100%;
-background-color: #37b7c3;
+.ybg-dark{
+background-color: #2e2e2e;
+color: white;
+}
 
+
+/*NAVBAR STYLES*/
+
+/*The style of the entire navbar*/
+.ynavbar{
+display: grid;
+grid-template-columns: 50% 50%;
+justify-items: end;
+align-items: center;
+padding-bottom: 2vw;
+}
+
+/*Navbar baguette line things that make the navbar pop up on mobile*/
+.ynav-expand-collapse-mobile{
+padding-right: 8vw;
+}
+
+.Yairo-Logo{
+justify-self: start;
+padding-left: 8vw;
+}
+
+
+.navvertical{
+
+    display: flex;
+    flex-direction: column;
+    
+    }
+    
+    
+.navhorizontal{
+    
+    
+    
+    }
+
+
+/*---------------------------*/
+
+.ybg-dark, .ybg-light, .nobg-light{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.hidden {
+
+display: none;
+
+}
+
+
+.desktop-layout{
+
+
+
+}
+
+.mobile-layout{
+    
+    
+}
+
+.yairo-landing-page{
+
+display: flex;
+flex-direction: column;
+
+
+}
+
+/*Footer*/
+
+.yairo-footer{
+
+background-color: #212121;
+
+}
+
+
+
+.whiteborders-bottom{
+
+    border-bottom: 1px rgb(255, 255, 255) solid;
 }
