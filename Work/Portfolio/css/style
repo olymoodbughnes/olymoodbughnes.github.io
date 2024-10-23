@@ -12,27 +12,40 @@ body{
 
 h1{
 
-font-size: 2.4rem;
+font-size: 2.2rem;
 font-weight:500;
+line-height: 36px;
 }
 
 p, button, nav, button{
 
 font-size: 1.3rem;
-
+font-weight: 350;
+line-height: 30px;
 }
+
+
 
 h1, p{
 
 margin: 0;
-padding-top: 10px; 
-padding-bottom: 10px; 
 
 }
 
-.ybg-light, .ynavbar{
+h1{
+padding-top: 10px;
+padding-bottom: 5px;
 
-background-color: #37b7c3;
+}
+
+p{
+    padding-bottom: 10px;
+    
+    }
+
+.ybg-light, .ynavbar{
+color: rgb(255, 255, 255);
+background-color: #237f88;
 
 }
 .nobg-light{
@@ -134,8 +147,8 @@ background-color: #212121;
 
 
 
-.whiteborders-bottom{
-
+.whiteborders-top-bottom{
+    border-top: 1px rgb(255, 255, 255) solid;
     border-bottom: 1px rgb(255, 255, 255) solid;
 }
 
