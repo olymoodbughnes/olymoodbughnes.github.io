@@ -15,7 +15,36 @@ h1{
 font-size: 2.2rem;
 font-weight:500;
 line-height: 36px;
+position: relative;
+border-bottom: 2px solid #eeaa19;
+box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.3);
+
+
 }
+
+/*h1::before {
+    position: absolute;
+    height: 3px;
+    width: 5%;
+    background: #a87b1a;
+ 
+    content: "";    
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+h1::after {
+    position: absolute;
+    height: 3px;
+    width: 90%;
+    background: #eeaa19;
+    left: 2%;
+    content: "";
+    bottom: 0;
+    
+    box-sizing: border-box;
+}
+*/
 
 p, button, nav, button{
 
@@ -33,31 +62,32 @@ margin: 0;
 }
 
 h1{
-padding-top: 10px;
-padding-bottom: 5px;
+padding-top: 50px;
+padding-bottom: 10px;
+margin-bottom: 12px;
 
 }
 
 p{
     padding-bottom: 10px;
-    
+   
     }
 
 .ybg-light, .ynavbar{
 color: rgb(255, 255, 255);
-background-color: #237f88;
+background-color: #008080;
 
 }
 .nobg-light{
 
-background-color: rgb(245, 244, 240);
+background-color: #f5f5f5;
 
 }
 
 
 .ybg-dark{
 background-color: #2e2e2e;
-color: white;
+color: rgba(255, 255, 255, 0.966)  ;
 }
 
 
@@ -103,7 +133,7 @@ padding-left: 8vw;
 .ybg-dark, .ybg-light, .nobg-light, .yairo-footer{
 padding-left: 20px;
 padding-right: 20px;
-padding-bottom: 30px;
+padding-bottom: 50px;
 
 
 }
@@ -157,7 +187,7 @@ background-color: #212121;
 
 .ybutton-light{
 
-background-color: #2e2e2e;
+background-color: #eeaa19;
 color: white;
 
 border-color: white;
