@@ -3,6 +3,7 @@ body{
     margin: 0;
     width: 100%;
     height: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * {
@@ -11,13 +12,21 @@ body{
 
 h1{
 
-font-size: 3rem;
+font-size: 2.4rem;
+font-weight:500;
+}
+
+p, button, nav, button{
+
+font-size: 1.3rem;
 
 }
 
-p, button, nav{
+h1, p{
 
-font-size: 1.5rem;
+margin: 0;
+padding-top: 10px; 
+padding-bottom: 10px; 
 
 }
 
@@ -26,6 +35,12 @@ font-size: 1.5rem;
 background-color: #37b7c3;
 
 }
+.nobg-light{
+
+background-color: rgb(245, 244, 240);
+
+}
+
 
 .ybg-dark{
 background-color: #2e2e2e;
@@ -73,9 +88,9 @@ padding-left: 8vw;
 /*---------------------------*/
 
 .ybg-dark, .ybg-light, .nobg-light, .yairo-footer{
-padding-left: 60px;
-padding-right: 60px;
-padding-bottom: 20px;
+padding-left: 20px;
+padding-right: 20px;
+padding-bottom: 30px;
 
 
 }
@@ -98,7 +113,7 @@ display: none;
     
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap:10px;
     align-items: flex-start;
     justify-items: start;
 }
@@ -150,11 +165,10 @@ border-color: white;
     }
 
 .ybutton-dark, .ybutton-light{
-
-    font-size: 2rem;
+    margin-top: 10px;
     border-style: solid;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     border-width: 1px;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7); /* Slight blur and opacity */
 
