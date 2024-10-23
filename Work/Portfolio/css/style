@@ -17,7 +17,7 @@ font-size: 3rem;
 
 p, button, nav{
 
-font-size: 2rem;
+font-size: 1.5rem;
 
 }
 
@@ -72,8 +72,9 @@ padding-left: 8vw;
 
 /*---------------------------*/
 
-.ybg-dark, .ybg-light, .nobg-light{
-padding-left: 20px;
+.ybg-dark, .ybg-light, .nobg-light, .yairo-footer{
+padding-left: 60px;
+padding-right: 60px;
 padding-bottom: 20px;
 
 
@@ -156,5 +157,24 @@ border-color: white;
     padding: 20px;
     border-width: 1px;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7); /* Slight blur and opacity */
+
+}
+
+
+
+/*SPLIT INTO DIFFERENT FILE*/
+/*RESPONSIVENESS*/
+@media (min-width: 760px) {
+h1{
+
+    font-size: 4rem;
+    
+    }
+    
+    p, button, nav{
+    
+    font-size: 2rem;
+    
+    }
 
 }
