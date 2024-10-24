@@ -148,8 +148,19 @@ padding-left: 8vw;
     color: #ffffff;
     border-bottom: 1px solid #ffffff5e;
     box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.3);
+    
+    transition: padding-left 0.1s ease-out, background-color 0.5s ease-out;
 
 }
+.navvertical a:hover{
+
+    padding-left: 3%;
+    
+    color: #eeaa19;
+    background-color: #808080;
+}
+
+
 
 
 
@@ -224,10 +235,18 @@ background-color: #212121;
 background-color: #eeaa19;
 color: white;
 
-border-color: rgba(255, 255, 255, 0);
+border-color: #cc9723;
 
+transition: background-color 0.1s ease-out, scale 0.1s ease-in-out;
+}
+
+.ybutton-light:hover{
+
+    background-color: #cc9723;
+scale: 1.01 ;
 
 }
+
 
 .ybutton-dark{
 
@@ -246,6 +265,7 @@ border-color: rgba(255, 255, 255, 0);
     margin-top: 10px;
     border-style: solid;
     border-radius: 8px;
+    border-width: 2px;
     padding: 10px;
     padding-left: 25px;
     padding-right: 25px;
