@@ -10,6 +10,11 @@ body{
     box-sizing: border-box;
   }
 
+
+a{
+    text-decoration: none;
+}
+
 h1{
 
 font-size: 2.2rem;
@@ -21,6 +26,8 @@ box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.3);
 
 
 }
+
+
 
 /*h1::before {
     position: absolute;
@@ -62,9 +69,9 @@ margin: 0;
 }
 
 h1{
-padding-top: 50px;
+padding-top: 20px;
 padding-bottom: 10px;
-margin-bottom: 12px;
+margin-bottom: 20px;
 
 }
 
@@ -94,7 +101,7 @@ color: rgba(255, 255, 255, 0.966)  ;
 /*NAVBAR STYLES*/
 
 /*The style of the entire navbar*/
-.ynavbar{
+.ynavbar-top{
 display: grid;
 grid-template-columns: 50% 50%;
 justify-items: end;
@@ -114,11 +121,38 @@ padding-left: 8vw;
 
 
 .navvertical{
-
+    padding-top: 1px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
+
+    align-items: start;
+    background-color: #2e2e2e;
+    width: 100%;
     
+    border-top: 3px solid #eeaa19;
+    
+    border-bottom: 5px solid #eeaa19;
+    box-shadow: 
+    inset 0px 4px 6px rgba(0, 0, 0, 0.3),  /* Top shadow */
+    inset 0px -9px 6px rgba(0, 0, 0, 0.3); /* Bottom shadow */
     }
+
+.navvertical a{
+    margin-left: 2%;
+    padding-left: 2%;
+    padding-top: 15px;
+    
+    padding-bottom: 15px;
+    width: 90%;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff5e;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
     
     
 .navhorizontal{
@@ -197,7 +231,7 @@ border-color: white;
 
 .ybutton-dark{
 
-    background-color: #37b7c3;
+    background-color: #008080;
     color: rgb(0, 0, 0);
    
    
