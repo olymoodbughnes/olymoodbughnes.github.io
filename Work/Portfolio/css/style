@@ -3,7 +3,7 @@ body{
     margin: 0;
     width: 100%;
     height: 100%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:"Gabarito", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * {
@@ -224,7 +224,7 @@ background-color: #212121;
 background-color: #eeaa19;
 color: white;
 
-border-color: white;
+border-color: rgba(255, 255, 255, 0);
 
 
 }
@@ -242,11 +242,13 @@ border-color: white;
     }
 
 .ybutton-dark, .ybutton-light{
+    font-weight: 600;
     margin-top: 10px;
     border-style: solid;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 10px;
-    border-width: 1px;
+    padding-left: 25px;
+    padding-right: 25px;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7); /* Slight blur and opacity */
 
 }
