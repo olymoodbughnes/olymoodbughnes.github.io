@@ -209,7 +209,14 @@ display: none;
 
 
 }
+.yform{
 
+border-color: #cc9723;
+border-radius: 8px;
+border-width: 2px;
+
+
+}
 /*Footer*/
 
 .yairo-footer{
@@ -227,13 +234,14 @@ flex-direction: column;
 
 
 .yfooter-section a{
+    width: 80%;
     margin-left: 2%;
     padding-left: 2%;
     padding-top: 15px;
     padding-bottom: 15px;
     color: rgb(158, 158, 158);
-    transition: padding-left 0.1s ease-out, scale 0.5s ease-out;
-
+    transition: scale 0.2s ease-out;
+    transform-origin: left ;
 }
 
 
@@ -241,7 +249,7 @@ flex-direction: column;
 .yfooter-section a:hover{
 
    
-    scale: -2;
+    scale: 1.1;
     color: #ffffff;
    
 }
@@ -267,7 +275,7 @@ transition: background-color 0.1s ease-out, scale 0.1s ease-in-out;
 .ybutton-light:hover{
 
     background-color: #cc9723;
-scale: 1.01 ;
+scale: 1.01;
 
 }
 
@@ -275,12 +283,9 @@ scale: 1.01 ;
 .ybutton-dark{
 
     background-color: #008080;
-    color: rgb(0, 0, 0);
-   
-   
-    border-color: white;
-    
-    
+    color: rgb(255, 255, 255);   
+    border-color: #0d6666;
+
     
     }
 
@@ -297,7 +302,26 @@ scale: 1.01 ;
 
 }
 
+.yairo-sub-footer{
 
+    width: 100%;
+    color: rgb(104, 104, 104);
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.yairo-sub-footer p {
+
+    font-size: 10px;
+    line-height: 1rem;
+    font-weight: 100;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
 
 /*SPLIT INTO DIFFERENT FILE*/
 /*RESPONSIVENESS*/
