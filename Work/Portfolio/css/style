@@ -232,7 +232,7 @@ flex-direction: column;
 }
 
 
-.yfooter-section a, p{
+.yfooter-section a, .yfooter-section p{
     width: 80%;
     margin-left: 2%;
     padding-left: 2%;
