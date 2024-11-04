@@ -4,11 +4,6 @@ body{
     width: 100%;
     height: 100%;
     font-family:"Gabarito", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('/img/wavybwpixelated.png'); /* Path to your image */
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent image tiling */
-    background-attachment: fixed; /* Fix the background image */
 }
 
 * {
@@ -85,18 +80,12 @@ p{
    
     }
 
-.ybg-light{
+.ybg-light, .ynavbar{
 color: rgb(255, 255, 255);
-background-color: #00808098;
-backdrop-filter: blur(6px); 
-}
-
-.ynavbar {
-
-    color: rgb(255, 255, 255);
-    background-color: #008080;
+background-color: #008080;
 
 }
+
 
 
 
@@ -109,7 +98,7 @@ background-color: #f5f5f5;
 
 .ybg-dark{
 background-color: #2e2e2e;
-color: rgba(255, 255, 255, 0.966);
+color: rgba(255, 255, 255, 0.966)  ;
 }
 
 
@@ -229,6 +218,42 @@ border-color: #cc9723;
 width: 90%;
 border-radius: 8px;
 border-width: 2px;
+
+
+}
+
+.yservices-item{
+
+margin-bottom: 50px;
+
+}
+
+.service-icons{
+
+    
+    width: 150px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #cc9723;
+    border-width: 2px;
+}
+
+.sample-websites-icons{
+    width: 100px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #cc9723;
+    border-width: 2px;
+
+}
+
+.ygrid-always-on{
+
+display: grid;
+width: 100%;
+row-gap: 20px;
+justify-items: center;
+grid-template-columns: 33% 34% 33%;
 
 
 }
