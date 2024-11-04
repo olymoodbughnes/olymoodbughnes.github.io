@@ -215,7 +215,7 @@ display: none;
 .yform{
 
 border-color: #cc9723;
-width: 90%;
+width: 98%;
 border-radius: 8px;
 border-width: 2px;
 
@@ -239,7 +239,7 @@ margin-bottom: 50px;
 }
 
 .sample-websites-icons{
-    width: 100px;
+    width: 60%;
     border-style: solid;
     border-radius: 8px;
     border-color: #cc9723;
