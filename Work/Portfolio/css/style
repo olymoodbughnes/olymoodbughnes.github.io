@@ -4,6 +4,11 @@ body{
     width: 100%;
     height: 100%;
     font-family:"Gabarito", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('/img/wavybwpixelated.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image tiling */
+    background-attachment: fixed; /* Fix the background image */
 }
 
 * {
@@ -80,11 +85,21 @@ p{
    
     }
 
-.ybg-light, .ynavbar{
+.ybg-light{
 color: rgb(255, 255, 255);
-background-color: #008080;
+background-color: #00808098;
+backdrop-filter: blur(6px); 
+}
+
+.ynavbar {
+
+    color: rgb(255, 255, 255);
+    background-color: #008080;
 
 }
+
+
+
 .nobg-light{
 
 background-color: #f5f5f5;
@@ -94,7 +109,7 @@ background-color: #f5f5f5;
 
 .ybg-dark{
 background-color: #2e2e2e;
-color: rgba(255, 255, 255, 0.966)  ;
+color: rgba(255, 255, 255, 0.966);
 }
 
 
@@ -132,7 +147,7 @@ padding-left: 8vw;
     
     border-top: 3px solid #eeaa19;
     
-    border-bottom: 5px solid #eeaa19;
+    border-bottom: 3px solid #eeaa19;
     box-shadow: 
     inset 0px 4px 6px rgba(0, 0, 0, 0.3),  /* Top shadow */
     inset 0px -9px 6px rgba(0, 0, 0, 0.3); /* Bottom shadow */
@@ -211,6 +226,7 @@ display: none;
 .yform{
 
 border-color: #cc9723;
+width: 90%;
 border-radius: 8px;
 border-width: 2px;
 
@@ -255,7 +271,7 @@ flex-direction: column;
 
 .Yairo-Logo-Footer img{
 
-    height: 200px;
+    width: 200px;
 
 }
 
