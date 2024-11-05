@@ -401,6 +401,43 @@ scale: 1.01;
         width:220px;
         
         }
+
+
+.q-content{
+/*combine redundancies later*/
+    padding: 15px;
+    border-style: solid;
+    border-radius:0 0 8px 8px;
+    border-color: #eeaa19;
+    border-width: 2px;
+}
+
+
+.q-section{
+   border: solid #eeaa19 2px;   
+   border-radius:8px 8px 0 0 ;
+   border-bottom: none;
+    width: 100%;
+}
+
+.q-content, .q-section{
+    
+    padding: 15px;
+    
+    }
+.q-section-middle{
+
+
+    border-radius: 0;
+}
+
+.q-section-bottom{
+    border-radius:0 0 8px 8px;
+    border: solid #eeaa19 2px;
+}
+
+
+
 /*SPLIT INTO DIFFERENT FILE*/
 /*RESPONSIVENESS*/
 @media (min-width: 760px) {
