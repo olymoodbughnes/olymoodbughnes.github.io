@@ -260,15 +260,26 @@ grid-template-columns: 33% 34% 33%;
 /*Footer*/
 
 .yairo-footer{
-
-background-color: #212121;
+padding-top: 10%;
+background-color: #131313;
 color: white;
+
 }
+
+
+
 
 .yfooter-section{
 
 display: flex;
 flex-direction: column;
+
+
+}
+
+.yfooter-section, .yfooter-section p{
+
+    font-size: 1.1rem;
 
 }
 
@@ -285,6 +296,15 @@ flex-direction: column;
 }
 
 
+.ylogo-footer-area p{
+
+    width: 90%;
+    
+        
+    }    
+
+
+ 
 
 .yfooter-section a:hover{
 
@@ -296,9 +316,12 @@ flex-direction: column;
 
 .Yairo-Logo-Footer img{
 
-    width: 200px;
+    width: 150px;
 
 }
+
+
+
 
 
 .whiteborders-top-bottom{
@@ -370,6 +393,14 @@ scale: 1.01;
     padding-right: 10%;
 }
 
+
+
+
+   .ylogo-footer-area-button-narrow{
+        margin-left: 4%;
+        width:220px;
+        
+        }
 /*SPLIT INTO DIFFERENT FILE*/
 /*RESPONSIVENESS*/
 @media (min-width: 760px) {
