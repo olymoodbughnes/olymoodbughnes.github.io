@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             // Optional: Prevent default behavior for touchstart to avoid double-tap zoom
-            event.preventDefault();
+
         }
     });
 });
