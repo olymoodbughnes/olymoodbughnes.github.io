@@ -2,9 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Select all .q-answer elements
     const items = document.querySelectorAll(".q-answer");
 
-    // Add an event listener to each .q-answer
+    // Add an event listener to each .q-answer for both touchstart and click
     items.forEach((item) => {
-        item.addEventListener("click", () => {
+        // Handle click and touchstart events
+        item.addEventListener("click", handleInteraction);
+        item.addEventListener("touchstart", handleInteraction);
+
+        // Event handler function for interaction (click or tap)
+        function handleInteraction(event) {
             // Access the .q-content element within the clicked item
             const section = item.querySelector(".q-section");
             const content = item.querySelector(".q-content");
@@ -45,6 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     content.removeEventListener("transitionend", transitionEnd); // Remove the listener after it's fired
                 });
             }
-        });
+
+            // Optional: Prevent default behavior for touchstart to avoid double-tap zoom
+            event.preventDefault();
+        }
     });
 });
