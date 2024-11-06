@@ -1,42 +1,48 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
     // Select all .q-answer elements
-    const items = document.querySelectorAll('.q-answer');
+    const items = document.querySelectorAll(".q-answer");
 
     // Add an event listener to each .q-answer
     items.forEach((item) => {
-        item.addEventListener('click', () => {
+        item.addEventListener("click", () => {
             // Access the .q-content element within the clicked item
-            const section = item.querySelector('.q-section');
-            const content = item.querySelector('.q-content');
-            const plusSymbol = item.querySelector('.q-symbol-plus');
-            const minusSymbol = item.querySelector('.q-symbol-minus');
+            const section = item.querySelector(".q-section");
+            const content = item.querySelector(".q-content");
+            const plusSymbol = item.querySelector(".q-symbol-plus");
+            const minusSymbol = item.querySelector(".q-symbol-minus");
 
+            const sectionId = section.id;
 
-            if (content.classList.contains('q-content-closed')) {
-                section.classList.add('q-section-open');
+            const sectionElement = document.getElementById(sectionId);
+
+            if (content.classList.contains("q-content-closed")) {
+                section.classList.add("q-section-open");
                 // Immediately remove the 'hidden' class to make it visible
-                content.classList.remove('hidden');
-                if (plusSymbol) plusSymbol.classList.add('hidden');
-                if (minusSymbol) minusSymbol.classList.remove('hidden');
+                content.classList.remove("hidden");
+                if (plusSymbol) plusSymbol.classList.add("hidden");
+                if (minusSymbol) minusSymbol.classList.remove("hidden");
+                if (sectionElement) sectionElement.classList.add("q-content-borders");
 
                 // Use a short delay to give the browser a chance to reflow
                 setTimeout(() => {
                     // Now, remove 'q-content-closed' and add 'q-content-open' to trigger animation
-                    content.classList.remove('q-content-closed');
-                    content.classList.add('q-content-open');
-                }, 10);  // A small delay (e.g., 20ms) to trigger the transition
+                    content.classList.remove("q-content-closed");
+                    content.classList.add("q-content-open");
+                }, 10); // A small delay (e.g., 20ms) to trigger the transition
             } else {
-                section.classList.remove('q-section-open');
-                if (plusSymbol) plusSymbol.classList.remove('hidden');
-                if (minusSymbol) minusSymbol.classList.add('hidden');
+                section.classList.remove("q-section-open");
+                if (plusSymbol) plusSymbol.classList.remove("hidden");
+                if (minusSymbol) minusSymbol.classList.add("hidden");
+                if (sectionElement)
+                    sectionElement.classList.remove("q-content-borders");
                 // When it's open, close it and add the 'q-content-closed' class
-                content.classList.remove('q-content-open');
-                content.classList.add('q-content-closed');
+                content.classList.remove("q-content-open");
+                content.classList.add("q-content-closed");
 
                 // Listen for the transition end to hide the element completely
-                content.addEventListener('transitionend', function transitionEnd() {
-                    content.classList.add('hidden'); // Add hidden class to set display: none
-                    content.removeEventListener('transitionend', transitionEnd); // Remove the listener after it's fired
+                content.addEventListener("transitionend", function transitionEnd() {
+                    content.classList.add("hidden"); // Add hidden class to set display: none
+                    content.removeEventListener("transitionend", transitionEnd); // Remove the listener after it's fired
                 });
             }
         });
