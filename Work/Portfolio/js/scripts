@@ -1,15 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Select all .q-answer elements
     const items = document.querySelectorAll(".q-answer");
-
+    let touchDetected = false;
     // Add an event listener to each .q-answer for both touchstart and click
     items.forEach((item) => {
         // Handle click and touchstart events
+        item.addEventListener('touchend', handleInteraction);
         item.addEventListener("click", handleInteraction);
-        item.addEventListener("touchstart", handleInteraction);
 
         // Event handler function for interaction (click or tap)
         function handleInteraction(event) {
+
+            if (event.type === "touchend") {
+                touchDetected = true;
+            }
+
+            // Skip the click event if a touch was detected
+            if (event.type === "click" && touchDetected) {
+                touchDetected = false; // Reset for next interaction
+                return;
+            }
+
+
+
             // Access the .q-content element within the clicked item
             const section = item.querySelector(".q-section");
             const content = item.querySelector(".q-content");
