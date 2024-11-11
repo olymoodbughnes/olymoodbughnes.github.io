@@ -11,15 +11,22 @@ document.addEventListener("DOMContentLoaded", function () {
     //============FUNCTIONS===============================================================
     function fixClick(event) {
 
-        // Check if the event was a touch event and set the flag
-        if (event.type === "touchend") {
-            touchDetected = true;
+        if (event.type === "touchstart") {
+            touchDetected = false; // Reset on touchstart
+        }
+
+        if (event.type === "touchmove") {
+            isScrolling = true; // Scroll detected
+        }
+
+        if (event.type === "touchend" && !isScrolling) {
+            touchDetected = true; // It's a valid tap
         }
 
         // If it's a click event and touch was already detected, skip the click event
         if (event.type === "click" && touchDetected) {
             touchDetected = false; // Reset the flag for the next interaction
-            return true;
+            return true; // Prevent the click handler
         }
 
         return false;
