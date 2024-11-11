@@ -1,7 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+
+    const navBurger = document.getElementById("burger");
+    const burgOpen = navBurger.querySelector(".nav-burger-open");
+    const burgClosed = navBurger.querySelector(".nav-burger-closed");
+
+    function toggleBurger() {
+
+
+        //open nav menu
+        if (burgOpen.classList.contains('hidden')) {
+            burgOpen.classList.remove('hidden');
+            burgClosed.classList.add('hidden');
+
+        }
+
+        //Close nav menu
+        else if (burgClosed.classList.contains('hidden')) {
+            burgClosed.classList.remove('hidden');
+            burgOpen.classList.add('hidden');
+        }
+
+    }
+
+
+    navBurger.addEventListener('touchend', toggleBurger);
+
+    navBurger.addEventListener('click', toggleBurger);
+
     // Select all .q-answer elements
     const items = document.querySelectorAll(".q-answer");
     let touchDetected = false;
+    let elementOpen = false;
+    let elementClosed = true;
     // Add an event listener to each .q-answer for both touchstart and click
     items.forEach((item) => {
         // Handle click and touchstart events
@@ -47,20 +78,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     content.classList.remove("q-content-closed");
                     content.classList.add("q-content-open");
                 }, 10); // A small delay (e.g., 20ms) to trigger the transition
-            } else {
+            } else if (content.classList.contains("q-content-open")) {
+
                 section.classList.remove("q-section-open");
                 if (plusSymbol) plusSymbol.classList.remove("hidden");
                 if (minusSymbol) minusSymbol.classList.add("hidden");
                 if (sectionElement)
                     sectionElement.classList.remove("q-content-borders");
+
                 // When it's open, close it and add the 'q-content-closed' class
                 content.classList.remove("q-content-open");
                 content.classList.add("q-content-closed");
 
                 // Listen for the transition end to hide the element completely
                 content.addEventListener("transitionend", function transitionEnd() {
-                    content.classList.add("hidden"); // Add hidden class to set display: none
-                    content.removeEventListener("transitionend", transitionEnd); // Remove the listener after it's fired
+                    if (content.classList.contains("q-content-open")) {
+                        return;
+                    } else {
+
+                        content.classList.add("hidden"); // Add hidden class to set display: none
+                        content.removeEventListener("transitionend", transitionEnd); // Remove the listener after it's fired
+                    }
+
                 });
             }
 

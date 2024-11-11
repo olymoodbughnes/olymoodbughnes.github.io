@@ -44,12 +44,16 @@
   <body class="yairo-landing-page mobile-layout">
     <!--################### NAV BAR ###########################-->
     <nav class="ynavbar">
+
       <div class="ynavbar-top">
         <a class="Yairo-Logo" href="">
           <img src="./img/LogoYairo.svg" height="70px" alt="" />
         </a>
 
-        <div class="ynav-expand-collapse-mobile">=</div>
+        <div class="ynav-expand-collapse-mobile" id = "burger">
+          <span class = "nav-burger-open"> = </span>
+          <span class = "nav-burger-closed hidden"> X </span>
+        </div>
       </div>
 
       <div class="navvertical">
@@ -59,6 +63,7 @@
         <a href="">Sectors</a>
         <a href="">Contact</a>
       </div>
+      
     </nav>
     <!--##################### BODY ############################-->
 
@@ -336,8 +341,8 @@
         class="yform"
         placeholder="Your comments here..."
         rows="4"
-        cols="auto"
-      ></textarea>
+        cols="auto">
+      </textarea>
       <button class="ybutton-dark">Send Message</button>
     </section>
 
