@@ -5,8 +5,60 @@ document.addEventListener("DOMContentLoaded", function () {
     const burgOpen = navBurger.querySelector(".nav-burger-open");
     const burgClosed = navBurger.querySelector(".nav-burger-closed");
 
-    function toggleBurger() {
 
+    const navMenu = document.getElementById("navmenu");
+
+    //============FUNCTIONS===============================================================
+    function fixClick(event) {
+
+        // Check if the event was a touch event and set the flag
+        if (event.type === "touchend") {
+            touchDetected = true;
+        }
+
+        // If it's a click event and touch was already detected, skip the click event
+        if (event.type === "click" && touchDetected) {
+            touchDetected = false; // Reset the flag for the next interaction
+            return true;
+        }
+
+        return false;
+    }
+    //======================================================================================
+
+
+    function toggleNavMenuMobile() {
+
+
+
+        if (navMenu.classList.contains('hidden')) {
+
+            navMenu.classList.remove('hidden');
+
+
+            setTimeout(() => { navMenu.classList.remove('nav-collapsed'); }, 10);
+
+
+        }
+
+        //Close nav menu
+        else {
+
+            navMenu.classList.add('nav-collapsed');
+            navMenu.classList.add('hidden');
+
+
+        }
+
+
+
+
+    }
+
+
+    function toggleBurger(event) {
+
+        if (fixClick(event)) return;
 
         //open nav menu
         if (burgOpen.classList.contains('hidden')) {
@@ -21,6 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
             burgOpen.classList.add('hidden');
         }
 
+        toggleNavMenuMobile();
+
     }
 
 
@@ -28,11 +82,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     navBurger.addEventListener('click', toggleBurger);
 
+
+
+
+
     // Select all .q-answer elements
     const items = document.querySelectorAll(".q-answer");
     let touchDetected = false;
     let elementOpen = false;
     let elementClosed = true;
+
     // Add an event listener to each .q-answer for both touchstart and click
     items.forEach((item) => {
         // Handle click and touchstart events
@@ -42,16 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Event handler function for interaction (click or tap)
         function handleInteraction(event) {
 
-            if (event.type === "touchend") {
-                touchDetected = true;
-            }
-
-            // Skip the click event if a touch was detected
-            if (event.type === "click" && touchDetected) {
-                touchDetected = false; // Reset for next interaction
-                return;
-            }
-
+            if (fixClick(event)) return;
 
 
             // Access the .q-content element within the clicked item
