@@ -45,7 +45,17 @@ document.addEventListener("DOMContentLoaded", function () {
         else {
 
             navMenu.classList.add('nav-collapsed');
-            navMenu.classList.add('hidden');
+
+
+            navMenu.addEventListener('transitionend', function handleTransitionEnd() {
+                // Add hidden class after the transition completes
+                navMenu.classList.add('hidden');
+
+                // Remove the event listener to prevent it from firing again in the future
+                navMenu.removeEventListener('transitionend', handleTransitionEnd);
+            });
+
+
 
 
         }
