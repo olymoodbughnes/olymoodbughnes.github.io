@@ -140,8 +140,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function scrollToTop(event) {
 
         if (fixClick(event)) return;
-
-
+        backToTopButton.classList.add("buttonToTop-hover");
+        setTimeout(() => {
+            backToTopButton.classList.remove("buttonToTop-hover");
+        }, 400);
         window, scrollTo({
             top: 0,
             behavior: "smooth"
@@ -149,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    backToTopButton.addEventListener('touchstart', scrollToTop);
+    backToTopButton.addEventListener('touchend', scrollToTop);
     backToTopButton.addEventListener('click', scrollToTop);
 
 
