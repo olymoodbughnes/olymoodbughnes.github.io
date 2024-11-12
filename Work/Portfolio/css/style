@@ -194,8 +194,8 @@ transition: all 0.1s ease;
 .ybg-light,
 .nobg-light,
 .yairo-footer {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-bottom: 50px;
 }
 
@@ -233,7 +233,8 @@ opacity: 0;
 
 .yservices-item {
   margin-bottom: 50px;
-  padding: 20px;
+  padding: 10px;
+  width: 100%;
   border-style: solid;
   border-radius: 8px;
   border-color: #cc9723;
@@ -246,7 +247,12 @@ opacity: 0;
   color: #131313;
 
 }
+.yservices-item p{
 
+  font-size: 0.9rem;
+  line-height: 1rem;
+
+}
 .ytxt-body-light{
 
   color: #646464;
@@ -271,7 +277,7 @@ opacity: 0;
 
 
 .service-icons {
-  width: 150px;
+  width: 80px;
   border-style: solid;
   border-radius: 8px;
   border-color: #cc9723;
