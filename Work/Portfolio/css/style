@@ -40,6 +40,11 @@ nav {
 #toTop{
 
   position: fixed;
+  width: 10vw; /* 10% of viewport width */
+  height: 10vw; /* 10% of viewport width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   bottom: 20px;
   right: 40px;
   width: 2.6em;
@@ -61,6 +66,7 @@ nav {
 scale: 1.1;
 transform: translateY(-20px);
 background-color: #85651f !important;
+
 
 
 }
