@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const navBurger = document.getElementById("burger");
     const burgOpen = navBurger.querySelector(".nav-burger-open");
     const burgClosed = navBurger.querySelector(".nav-burger-closed");
-
+    const backToTopButton = document.getElementById("toTop");
 
     const navMenu = document.getElementById("navmenu");
-
+    let hideToTopComplete = true;
     //============FUNCTIONS===============================================================
     function fixClick(event) {
 
@@ -32,6 +32,44 @@ document.addEventListener("DOMContentLoaded", function () {
         return false;
     }
     //======================================================================================
+
+
+
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 500 && (hideToTopComplete)) { // Show after scrolling down 300px
+            hideToTopComplete = false;
+
+            backToTopButton.classList.remove("hidden");
+            setTimeout(() => {
+                backToTopButton.classList.remove("invis");
+                hideToTopComplete = true;
+            }, 200);
+
+        } else if (window.scrollY <= 300 && hideToTopComplete) {
+            hideToTopComplete = false;
+            backToTopButton.classList.add("invis")
+
+            setTimeout(() => {
+                backToTopButton.classList.add("hidden");
+                hideToTopComplete = true;
+            }, 200);
+
+
+        }
+
+        if (window.scrollY === 0) {
+            hideToTopComplete = true;
+            backToTopButton.classList.add("invis");
+
+            backToTopButton.classList.add("hidden");
+        }
+    });
+
+
+
+
 
 
     function toggleNavMenuMobile() {
@@ -96,11 +134,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     navBurger.addEventListener('touchend', toggleBurger);
-
     navBurger.addEventListener('click', toggleBurger);
 
 
+    function scrollToTop(event) {
 
+        if (fixClick(event)) return;
+
+
+        window, scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+    backToTopButton.addEventListener('touchstart', scrollToTop);
+    backToTopButton.addEventListener('click', scrollToTop);
 
 
     // Select all .q-answer elements
