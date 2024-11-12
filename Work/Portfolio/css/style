@@ -245,6 +245,8 @@ opacity: 0;
 .yservices-item h2{
 
   color: #131313;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
 }
 .yservices-item p{
