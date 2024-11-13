@@ -31,7 +31,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return false;
     }
+
+
+    function sizeChecker() {
+
+
+        let element = document.querySelector('.yairo-landing-page');
+        if (window.innerWidth > 769) {
+            element.classList.remove('mobile-layout');
+        } else {
+            element.classList.add('mobile-layout');
+        }
+
+    }
     //======================================================================================
+
+
+
+
+
+
+    window.addEventListener('load', sizeChecker);
+    window.addEventListener('resize', sizeChecker);
 
 
 
