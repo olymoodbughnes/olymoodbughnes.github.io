@@ -37,11 +37,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         let element = document.querySelector('.yairo-landing-page');
+        let navElement = document.getElementById('navmenu');
+        let navBurger = document.getElementById('burger');
+
+
+
         if (window.innerWidth > 769) {
+            navElement.classList.remove('navvertical');
+            navElement.classList.remove('nav-collapsed');
+            navElement.classList.remove('hidden');
+            navBurger.classList.add('hidden');
+
+
             element.classList.remove('mobile-layout');
+
         } else {
+            navElement.classList.add('navvertical');
+            navElement.classList.add('nav-collapsed');
+            navElement.classList.add('hidden');
+            navBurger.classList.remove('hidden');
             element.classList.add('mobile-layout');
         }
+
+        if (window.innerWidth > 1000) {
+            navElement.classList.remove('navvertical');
+            navElement.classList.remove('nav-collapsed');
+            navElement.classList.remove('hidden');
+            navBurger.classList.add('hidden');
+
+
+
+
+        } else {
+            navElement.classList.add('navvertical');
+            navElement.classList.add('nav-collapsed');
+            navElement.classList.add('hidden');
+            navBurger.classList.remove('hidden');
+
+        }
+
+
 
     }
     //======================================================================================

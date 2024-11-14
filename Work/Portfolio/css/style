@@ -32,7 +32,7 @@ p {
 p,
 button,
 nav {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 300;
   line-height: 30px;
 }
@@ -83,13 +83,19 @@ nav {
   box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.3);
 }
 
+
+.block-bottom-yellow{
+
+border-bottom: solid 2px #eeaa19;
+
+}
+
 /*==========================================================================================================*/
 
 .ybg-light,
 .ynavbar {
   color: rgb(255, 255, 255);
   background-color: #008080;
-  border-bottom: solid 2px #eeaa19;
 }
 
 .nobg-light {
@@ -112,6 +118,8 @@ nav {
   padding-bottom: 2vw;
 }
 
+
+
 /*Navbar baguette line things that make the navbar pop up on mobile*/
 .ynav-expand-collapse-mobile {
   margin-right: 8vw;
@@ -125,6 +133,21 @@ nav {
   justify-self: start;
   padding-left: 8vw;
 }
+.navhorizontal {
+
+font-size: 1.2rem;
+
+}
+
+
+.navhorizontal a:hover {
+
+  scale: 1.01;
+  
+  color: #eeaa19 !important;  
+  transition: all 0.1s ease-in-out;
+  }
+
 
 .navvertical {
   padding-top: 1px;
@@ -215,13 +238,14 @@ nav {
 
 .yform {
   border-color: #cc9723;
-  font-size: 1.4rem;
+  font-size: 0.9rem;
   width: 98%;
   height: 30vw;
   border-radius: 8px;
   border-width: 2px;
   box-shadow: 2px 6px 9px 0px rgba(0, 0, 0, 0.3);
 }
+
 
 /*SERVICES summary section*/
 
@@ -338,8 +362,8 @@ nav {
   width: 150px;
 }
 
-.whiteborders-top-bottom {
-  border-top: 1px #eeaa19 solid;
+.block-yellow-top {
+  border-top: 2px #eeaa19 solid;
 }
 
 /*Buttons*/
@@ -379,7 +403,7 @@ nav {
 
 .yairo-sub-footer {
   width: 100%;
-  color: rgb(104, 104, 104);
+  color: rgb(165, 165, 165);
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -387,10 +411,10 @@ nav {
 }
 
 .yairo-sub-footer p {
-  font-size: 10px;
+  font-size: 0.9rem;
   line-height: 1rem;
-  font-weight: 100;
-  padding-top: 5%;
+  font-weight: 200;
+  padding-top: 1%;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -445,7 +469,7 @@ nav {
 .q-content-open {
   max-height: 1000vw; /* Expanded height */
   opacity: 1;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 300;
   padding: 20px;
   background-color: #f5f5f5;
@@ -456,7 +480,7 @@ nav {
 }
 .q-section {
   border: solid #cc9723 2px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-radius: 8px 8px 0 0;
   border-bottom: solid #f5f5f5 2px;
   background-color: #f5f5f5;
@@ -531,6 +555,12 @@ nav {
     line-height: 20px;
   }
 
+
+/*NAVIGATION BAR STYLES*/
+
+
+
+
   /*Website samples section*/
 
   .ygrid-always-on {
@@ -595,7 +625,7 @@ nav {
     display: grid;
     justify-content: center;
     justify-items: start;
-    grid-template-columns: 32% 32%;
+    grid-template-columns: 42% 42%;
   }
 
   .above-fold-layout > :nth-child(1),
@@ -609,7 +639,7 @@ nav {
     display: grid;
     justify-content: center;
     justify-items: start;
-    grid-template-columns: 32% 32%;
+    grid-template-columns: 42% 42%;
   }
 
   .intro-process-layout > :nth-child(1),
@@ -625,7 +655,7 @@ nav {
     justify-content: center;
     justify-items: start;
     gap: 20px;
-    grid-template-columns: 80%;
+    grid-template-columns: 100%;
   }
 
   .reviews-layout {
@@ -633,7 +663,7 @@ nav {
     display: grid;
     justify-content: center;
     justify-items: start;
-    grid-template-columns: 64%;
+    grid-template-columns: 84%;
   }
 
   .faq-layout {
@@ -641,7 +671,7 @@ nav {
     display: grid;
     justify-content: center;
     justify-items: start;
-    grid-template-columns: 64%;
+    grid-template-columns: 84%;
   }
 
   .desktop-services-layout {
@@ -649,16 +679,27 @@ nav {
     display: grid;
     justify-content: center;
     justify-items: start;
-    grid-template-columns: 64%;
+    grid-template-columns: 84%;
   }
+
+  .form-layout{
+
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    justify-items: start;
+    grid-template-columns: 84%;
+  
+  }
+  
 
   .yfooter-layout{
 
     display: grid;
-    justify-content: start;
+    justify-content: center;
     justify-items: start;
     grid-template-columns: 40% 40%;
-    column-gap: 20%;
+    column-gap: 10%;
     
 
   }
@@ -669,7 +710,14 @@ nav {
 
   }
   
-  
+  .q-section{
+
+    font-size: 1.1rem;
+
+  }
+
+
+
   .yfooter-layout > :nth-child(1),
   .yfooter-layout> :nth-child(2) {
     grid-column: 1;
@@ -689,10 +737,66 @@ nav {
 
 
 @media (min-width: 1000px){
+
+
+
+  .Yairo-Logo{
+
+    padding: 0;
+  }
+  
+  .ynavbar{
+  
+  display: grid;
+  justify-content: center;
+  justify-items: start;
+  column-gap: 14%; 
+  grid-template-columns: 15% 55%;
+  
+  }
+  
+  #navmenu{
+  
+  display: grid;
+  
+  align-items: center;
+  justify-items: center;
+  width: 80%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  
+  }
+  
+  #navmenu a{
+    color: #f5f5f5;
+    
+  }
+
+  #navmenu button{
+
+    padding: 10px;
+
+  }
+  
+/*CONTENT WIDTH*/
+
+
+
+
+
+
+
+  .ynavbar-top{
+  
+    display: block;
+  }
+  
+  
+
+
   .yfooter-layout{
 
     display: grid;
-    justify-content: start;
+    justify-content: center;
     justify-items: start;
     grid-template-columns: 20% 20% 20% 20%;
     column-gap: 5%;
@@ -701,7 +805,7 @@ nav {
   }
 
   .yfooter-section{
-
+    font-size: 0.9rem;
     width: 200px;
 
   }
@@ -723,6 +827,65 @@ nav {
 
     grid-column: 4;
   }
+
+
+}
+
+
+
+@media (min-width: 1440px){
+
+
+/*CONTENT WIDTH*/
+
+.ynavbar{
+  
+ 
+  column-gap: 14%; 
+  grid-template-columns: 5% 45%;
+  
+  }
+
+.above-fold-layout ,
+.intro-process-layout{
+
+  grid-template-columns: 32% 32%;
+
+}
+
+.website-showcase-layout {
+
+  grid-template-columns: 80%;
+}
+
+.reviews-layout,
+.faq-layout,
+.desktop-services-layout {
+
+  grid-template-columns: 64%;
+
+}
+
+.ylogo-footer-area-button-narrow{
+
+  width: 180px;
+
+}
+
+.form-layout{
+
+
+  grid-template-columns: 64%;
+
+}
+
+.yfooter-layout{
+
+  grid-template-columns: 15% 15% 15% 15%;
+    column-gap: 5%;
+
+}
+
 
 
 }
