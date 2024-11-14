@@ -1,0 +1,82 @@
+/*DEBUGGING*/
+
+.twb {
+    color: white;
+    background-color: black;
+
+
+}
+
+.tbw {
+
+    color: black;
+    background-color: white;
+}
+
+
+
+/*LISTS*/
+
+.unordered-format{
+
+    list-style-position: inside;
+
+}
+
+@media (min-width: 769px) {
+
+    /*BLOCK SIZING = 84%*/
+
+    .content-2-col {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        justify-items: start;
+        align-items: start;
+        grid-template-columns: 42% 42%;
+    }
+
+    .content-1-col-centre {
+
+
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        grid-template-columns: 84%;
+
+    }
+
+    /*BLOCK GRID MERGERS*/
+
+    .second-col-merge-10-rows {
+
+
+        grid-column: 2;
+        grid-row: 1 / span 10;
+        align-self: center;
+        justify-self: center;
+
+    }
+
+    .first-col-merge-10-rows {
+
+
+        grid-column: 1;
+        grid-row: 1 / span 10;
+        align-self: center;
+        justify-self: center;
+
+    }
+
+
+}
+
+@media (min-width: 1440px) {
+
+    /*BLOCK SIZING = 64%*/
+
+    .content-2-col {
+        grid-template-columns: 32% 32%;
+    }
+}

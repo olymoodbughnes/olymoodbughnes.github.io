@@ -17,10 +17,13 @@
     />
     <!--Font styles-->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gabarito:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gabarito:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,9 +41,10 @@
       rel="stylesheet"
     />
     <!--External file links-->
-    
+
     <link rel="icon" href="img/FaviconYairo.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style" />
+    <link rel="stylesheet" href="./css/responsiveness" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/scripts"></script>
   </head>
@@ -49,84 +53,86 @@
   <body class="yairo-landing-page mobile-layout">
     <!--################### NAV BAR ###########################-->
     <nav class="ynavbar block-bottom-yellow">
-
-      <div class="ynavbar-top ">
+      <div class="ynavbar-top">
         <a class="Yairo-Logo" href="">
           <img src="./img/LogoYairo.svg" height="70px" alt="" />
         </a>
 
-        <div class="ynav-expand-collapse-mobile hidden" id = "burger">
-          <span class = "nav-burger-open"> = </span>
-          <span class = "nav-burger-closed hidden"> X </span>
+        <div class="ynav-expand-collapse-mobile hidden" id="burger">
+          <span class="nav-burger-open"> = </span>
+          <span class="nav-burger-closed hidden"> X </span>
         </div>
       </div>
 
-      <div class="navhorizontal navvertical nav-collapsed hidden" id = "navmenu">
-        <a href="">Home</a>
-        <a href="">About me</a>
-        <a href="">Services</a>
+      <div class="navhorizontal navvertical nav-collapsed hidden" id="navmenu">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About me</a>
+        <a href="./services.html">Services</a>
         <a href="">Sectors</a>
-        <button class = "ybutton-light"href="">Contact</button>
+        <button class="ybutton-light" href="">Contact</button>
       </div>
-      
     </nav>
     <!--##################### BODY ############################-->
 
-    <section class="above-fold-layout nobg-light">
-      <h1 class="ytitle-dark yorange-title-underline">
-        Boosting Small Businesses with Outstanding Websites
-      </h1>
+    <section class="content-1-col-centre nbg-light">
+      <h1 class="yorange-title-underline">My mission</h1>
       <p class="ytxt-body-light">
         I create budget friendly websites to help smaller businesses attract
         customers with outstanding, easy-to-use, versatile designs.
       </p>
-      <button class="ybutton-light">Website Pricing</button>
     </section>
 
-    <section class="intro-process-layout  ybg-light">
-      <h2 class="ytitle-dark yorange-title-underline">
-        Helping Small Businesses <span class = "txt-yellow">Thrive </span>and <span class = "txt-yellow"> Achieve Success</span>
-      </h2>
-      <p class="ytxt-body-dark">
-        I specialize in helping small businesses succeed by creating websites
-        that not only look great but also follow industry best practices. These
-        websites are designed with a focus on user experience, ensuring visitors
-        can easily navigate, find what they need, and engage with your brand. A
-        well-structured, responsive website is essential in today’s digital
-        landscape, and I make sure your online presence is optimized for all
-        devices, providing a seamless experience for your audience.
-      </p>
+    <section class="content-2-col ybg-light">
+       
+        <h2 class="yorange-title-underline">Helping Small Businesses</h2>
+       
+        
+       
+        <p class="ytxt-body-dark">
+        Hi, I’m Yairo, a web developer passionate about bringing small business websites to life.
+        My mission is to help local businesses stand out online with sites that aren’t just attractive but are also easy to use and maintain. 
+        I’m dedicated to creating websites that showcase the unique personality of each business and build meaningful connections with their customers.
+        </p>
+        </br></br>
+        <ul>
+        <li>Autoplaying videos that interrupt the user.</li>
+        </br>
+        <li>Pop-ups that are hard to close.</li>
+        </br>
+        <li>Animations that slow down the site.</li>
+        </br>
+        <li>Too much text on a page.</li>
+        </ul>
+        <div class = "second-col-merge-10-rows tbw">image</div>
+        </br></br>  
+        <p class="ytxt-body-dark">
+        With a background in computer science and a specialty in front-end development, I focus on designing responsive, custom websites that look
+        great on any device and are easy to update. I believe in providing hands-on support every step of the way, from initial design
+        to ongoing maintenance, making sure you have a website that works for your busines
+        </p>
 
-      <p class="ytxt-body-dark">
-        Look, I get it—starting and running a small business is tough, and the
-        idea of building a professional website can feel overwhelming or
-        expensive. But it doesn’t have to be. My goal is to make this process
-        easy and stress-free. I create websites that help your business grow
-        without breaking the bank. A strong website is a powerful tool, and I’m
-        here to deliver something that’s affordable, effective, and connects you
-        with your customers to help your business thrive.
-      </p>
-      <button class="ybutton-light">More about the process</button>
     </section>
 
 
- 
-    <section class="form-layout ybg-dark  block-yellow-top">
+    <!-----------------------------------FORM-------------------------------------------------------------------------------------------------------->
+
+    <section class="form-layout ybg-dark block-yellow-top">
       <h2 class="ytitle-light yorange-title-underline">Contact Me</h2>
-      <article class = "yform-section">
-      <p class="ytxt-body-dark">
-        Interested in taking your busines to the next level? Don’t hesitate to
-        ask any questions, I’ll get back to you promptly.
-      </p>
-      
-      <textarea
-        class="yform"
-        placeholder="Your comments here..."
-        rows="4"
-        cols="auto"></textarea>
-   
-      <button class="ybutton-dark">Send Message</button>
-    </article>
+      <article class="yform-section">
+        <p class="ytxt-body-dark">
+          Interested in taking your busines to the next level? Don’t hesitate to
+          ask any questions, I’ll get back to you promptly.
+        </p>
+
+        <textarea
+          class="yform"
+          placeholder="Your comments here..."
+          rows="4"
+          cols="auto"
+        ></textarea>
+
+        <button class="ybutton-dark">Send Message</button>
+      </article>
     </section>
 
     <!---------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -145,7 +151,9 @@
           </button>
         </section>
         <section class="yfooter-section">
-          <h2 class="ftr-clm-title-pos clm-tl-aux yorange-title-underline">Browse</h2>
+          <h2 class="ftr-clm-title-pos clm-tl-aux yorange-title-underline">
+            Browse
+          </h2>
           <a href="">Home</a>
           <a href="">About Us</a>
           <a href="">Services</a>
@@ -153,14 +161,18 @@
           <a href="">Contact</a>
         </section>
         <section class="yfooter-section">
-          <h2 class="ftr-clm-title-pos clm-tl-aux yorange-title-underline">Services</h2>
+          <h2 class="ftr-clm-title-pos clm-tl-aux yorange-title-underline">
+            Services
+          </h2>
           <a href="">Strategy Consulting</a>
           <a href="">Organisational Development</a>
           <a href="">Business Development</a>
           <a href="">Investment Management and Evaluation</a>
         </section>
         <section class="yfooter-section">
-          <h2 class="ftr-clm-title-pos clm-tl-aux yorange-title-underline">Contact</h2>
+          <h2 class="ftr-clm-title-pos clm-tl-aux yorange-title-underline">
+            Contact
+          </h2>
 
           <a href="">email@example.com</a>
         </section>
@@ -175,7 +187,12 @@
     </article>
 
     <!---------------------------------------------------------------------------------------------------------------------------------------------------------->
- <button id = "toTop" class = "buttonToTop invis hidden" aria-label="Back to top">^</button>
-   
+    <button
+      id="toTop"
+      class="buttonToTop invis hidden"
+      aria-label="Back to top"
+    >
+      ^
+    </button>
   </body>
 </html>
