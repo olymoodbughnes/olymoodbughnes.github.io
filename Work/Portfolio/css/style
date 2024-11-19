@@ -369,6 +369,16 @@ font-size: 1.2rem;
 
 /*Buttons*/
 
+
+
+
+.pointer-shape-click{
+
+  cursor: pointer;
+
+
+}
+
 .ybutton-light {
   background-color: #eeaa19;
   color: white;
@@ -537,6 +547,8 @@ font-size: 1.2rem;
 .txt-yellow {
   color: #eeaa19;
 }
+
+
 /*SPLIT INTO DIFFERENT FILE*/
 /*RESPONSIVENESS*/
 @media (min-width: 769px) {
@@ -564,6 +576,7 @@ font-size: 1.2rem;
 
   /*Website samples section*/
 
+
   .ygrid-always-on {
     grid-template-columns: 20% 20% 20% 20% 20%;
   }
@@ -571,6 +584,14 @@ font-size: 1.2rem;
   .sample-websites-icons {
     width: 15vw;
     transition: all 0.2s ease;
+  }
+
+
+  .empty-website-icon{
+
+    height: 100%;
+    background-color: #00000075;
+   
   }
 
   .sample-websites-icons:hover {
@@ -763,7 +784,7 @@ font-size: 1.2rem;
   align-items: center;
   justify-items: center;
   width: 80%;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 18% 18% 18% 18% 28%;
   
   }
   
@@ -773,8 +794,12 @@ font-size: 1.2rem;
   }
 
   #navmenu button{
-
+    margin: 0;
     padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.2rem !important;
+  
 
   }
   
