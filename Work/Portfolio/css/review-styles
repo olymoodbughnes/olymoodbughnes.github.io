@@ -1,0 +1,57 @@
+.review-author,
+.author-site{
+
+padding: 0;
+
+}
+
+.review-style-block{
+    display: grid;
+    align-content: space-between;
+    background-color: #f5f5f5;
+    padding: 20px;
+   
+
+}
+
+.review-style-comment{
+    
+    font-style: italic;
+
+}
+
+
+
+.reviews-page-layout{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 10px;
+}
+
+@media (min-width: 769px) {
+
+    /*BLOCK SIZING = 84%*/
+
+    .reviews-page-layout{
+      
+        justify-content: center;
+        gap: 10px;
+        grid-template-columns: 42% 42%;
+    }
+
+
+}
+
+@media (min-width: 1440px) {
+
+    /*BLOCK SIZING = 64%*/
+    .reviews-page-layout{
+      
+      
+        grid-template-columns: 21% 22% 21%;
+    }
+
+}

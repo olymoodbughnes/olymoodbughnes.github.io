@@ -554,6 +554,11 @@ font-size: 1.2rem;
   color: #eeaa19;
 }
 
+.txt-bold{
+  font-weight: 700;
+}
+
+
 
 /*SPLIT INTO DIFFERENT FILE*/
 /*RESPONSIVENESS*/
@@ -782,9 +787,10 @@ font-size: 1.2rem;
   display: grid;
   
   align-items: center;
-  justify-items: center;
-  width: 80%;
-  grid-template-columns: 18% 18% 18% 18% 28%;
+  justify-items: start;
+  width: 90%;
+  gap: 10px;
+  grid-template-columns: auto auto auto auto auto;
   
   }
   
