@@ -303,7 +303,7 @@ font-size: 1.2rem;
 }
 
 .sample-websites-icons {
-  width: 140px;
+  width: 40vw;
   border-style: solid;
   border-radius: 8px;
   border-color: #cc9723;
@@ -321,9 +321,10 @@ font-size: 1.2rem;
   display: grid;
   width: 100%;
   row-gap: 20px;
-  justify-content: start;
+  column-gap: 20px;
+  justify-content: center;
   justify-items: center;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 40% 40%;
 }
 
 /*Footer*/
@@ -558,7 +559,15 @@ font-size: 1.2rem;
   font-weight: 700;
 }
 
+@media (min-width: 500px) {
 
+
+  .sample-websites-icons {
+    width: 30vw;
+  
+  }
+
+}
 
 /*SPLIT INTO DIFFERENT FILE*/
 /*RESPONSIVENESS*/
@@ -575,7 +584,7 @@ font-size: 1.2rem;
   p,
   button,
   nav {
-    font-size: 0.9rem !important;
+  
     line-height: 20px;
   }
 
@@ -682,7 +691,7 @@ font-size: 1.2rem;
     justify-content: center;
     justify-items: start;
     gap: 20px;
-    grid-template-columns: 100%;
+    grid-template-columns: 84%;
   }
 
   .reviews-layout {
@@ -777,8 +786,8 @@ font-size: 1.2rem;
   display: grid;
   justify-content: center;
   justify-items: start;
-  column-gap: 14%; 
-  grid-template-columns: 15% 55%;
+  column-gap: 1%; 
+  grid-template-columns: 15% 75%;
   
   }
   
@@ -790,7 +799,7 @@ font-size: 1.2rem;
   justify-items: start;
   width: 90%;
   gap: 10px;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto;
   
   }
   
@@ -874,7 +883,7 @@ font-size: 1.2rem;
   
  
   column-gap: 14%; 
-  grid-template-columns: 5% 45%;
+  grid-template-columns: 5% 60%;
   
   }
 

@@ -23,7 +23,14 @@
 
 }
 
+/*H1 Titles*/
 
+.h1-centre{
+
+    display: grid !important;
+    justify-content: center;
+    
+}
 
 @media (min-width: 769px) {
 
