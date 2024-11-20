@@ -310,6 +310,12 @@ font-size: 1.2rem;
   border-width: 2px;
   box-shadow: 2px 6px 9px 0px rgba(0, 0, 0, 0.3);
 }
+.empty-website-icon{
+
+  height: 100%;
+  background-color: #00000075;
+ 
+}
 
 .ygrid-always-on {
   display: grid;
@@ -587,13 +593,7 @@ font-size: 1.2rem;
   }
 
 
-  .empty-website-icon{
-
-    height: 100%;
-    background-color: #00000075;
-   
-  }
-
+ 
   .sample-websites-icons:hover {
     scale: 1.04;
   }
