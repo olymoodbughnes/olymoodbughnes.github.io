@@ -32,6 +32,20 @@
     
 }
 
+/*Section card*/
+
+.white-rounded-card{
+
+
+    border: solid;
+    border-radius: 8px;
+    border-color: #cc9723;
+    border-width: 2px;
+    background-color: #f5f5f5;
+
+}
+
+
 @media (min-width: 769px) {
 
     /*BLOCK SIZING = 84%*/

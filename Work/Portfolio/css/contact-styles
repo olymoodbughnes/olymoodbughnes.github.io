@@ -1,0 +1,79 @@
+.contact-page-input{
+
+    border-color: #cc9723;
+    font-size: 0.9rem;
+    width: 100%;
+    height: 5vw;
+    border-radius: 8px;
+    border-width: 2px;
+    box-shadow: 2px 6px 9px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+.contact-page-comment{
+
+    border-color: #cc9723;
+    font-size: 0.9rem;
+    width: 100%;
+    height: 15vw;
+    border-radius: 8px;
+    border-width: 2px;
+    box-shadow: 2px 6px 9px 0px rgba(0, 0, 0, 0.3);
+
+    grid-column: 1 / span 3;
+    grid-row: 5;
+    justify-self: center;
+
+}
+
+
+.contact-page-button{
+
+    grid-column: 1 / span 3;
+    grid-row: 6;
+    width: 100%;
+
+
+}
+
+
+
+h3{
+    padding-top: 20px;
+margin: 0;
+
+}
+/*Form page section card style format*/
+
+.form-page-format{
+width: 100%;
+display: grid;
+gap: 20px;
+grid-template-columns: 30% 30% 30%;
+justify-content: center;
+align-items: end;
+justify-items: start;
+padding-top: 40px;
+padding-bottom: 40px;
+    
+}
+
+
+.form-page-format p{
+
+grid-column: 1 / span 3;
+justify-self: center;
+
+
+}
+
+.comment-title{
+
+    grid-column: 1 / span 3;
+    grid-row: 4;
+
+}
+
+
